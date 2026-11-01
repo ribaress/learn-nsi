@@ -1,0 +1,78 @@
+<script setup>
+import {
+  PhHouse,
+  PhSquaresFour,
+  PhDownloadSimple,
+  PhBookOpen,
+  PhArrowRight,
+  PhArrowLeft,
+  PhArrowUp,
+  PhArrowDown,
+  PhCaretRight,
+  PhClock,
+  PhCheck,
+  PhCheckCircle,
+  PhLightbulb,
+  PhCode,
+  PhCube,
+  PhPlay,
+  PhPause,
+  PhArrowCounterClockwise,
+  PhRobot,
+  PhMagnifyingGlass,
+  PhFlag,
+  PhMedal,
+  PhFlask,
+  PhStop,
+  PhUploadSimple,
+  PhInfo,
+  PhWarning,
+  PhX,
+  PhPlus,
+  PhTrash,
+  PhArrowSquareOut,
+  PhSparkle
+} from '@phosphor-icons/vue';
+defineProps({
+  name: String,
+  size: { type: [Number, String], default: 20 },
+  weight: { type: String, default: 'regular' }
+});
+const icons = {
+  home: PhHouse,
+  skills: PhSquaresFour,
+  save: PhDownloadSimple,
+  book: PhBookOpen,
+  right: PhArrowRight,
+  left: PhArrowLeft,
+  up: PhArrowUp,
+  down: PhArrowDown,
+  chevron: PhCaretRight,
+  clock: PhClock,
+  check: PhCheck,
+  success: PhCheckCircle,
+  hint: PhLightbulb,
+  code: PhCode,
+  blocks: PhCube,
+  play: PhPlay,
+  pause: PhPause,
+  restart: PhArrowCounterClockwise,
+  robot: PhRobot,
+  magnify: PhMagnifyingGlass,
+  flag: PhFlag,
+  medal: PhMedal,
+  lab: PhFlask,
+  stop: PhStop,
+  upload: PhUploadSimple,
+  info: PhInfo,
+  warning: PhWarning,
+  close: PhX,
+  plus: PhPlus,
+  trash: PhTrash,
+  external: PhArrowSquareOut,
+  sparkle: PhSparkle
+};
+</script>
+<template>
+  <component :is="icons[name] || PhInfo" :size="size" :weight="weight" aria-hidden="true" />
+</template>

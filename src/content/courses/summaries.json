@@ -1,0 +1,1213 @@
+{
+  "snt": [
+    {
+      "id": "programmation",
+      "title": "Programmer et situer le numérique",
+      "description": "Une chronologie raisonnée et des programmes Python pour décrire, décider et répéter.",
+      "lessons": [
+        {
+          "id": "snt-reperes-historiques",
+          "title": "Des machines isolées aux usages connectés",
+          "duration": 30,
+          "objectives": [
+            "Distinguer invention, diffusion et transformation des usages.",
+            "Situer le Web parmi les autres techniques numériques."
+          ],
+          "exercises": [
+            { "id": "snt-reperes-historiques-ex1" },
+            { "id": "snt-reperes-historiques-ex2" },
+            { "id": "snt-reperes-historiques-ex3" }
+          ]
+        },
+        {
+          "id": "snt-variables",
+          "title": "Décrire une situation avec des variables",
+          "duration": 35,
+          "objectives": [
+            "Suivre des affectations dans leur ordre.",
+            "Écrire une fonction qui reçoit une donnée et renvoie un résultat."
+          ],
+          "exercises": [
+            { "id": "snt-variables-ex1" },
+            { "id": "snt-variables-ex2" },
+            { "id": "snt-variables-ex3" }
+          ]
+        },
+        {
+          "id": "snt-conditions",
+          "title": "Décider avec des conditions",
+          "duration": 35,
+          "objectives": [
+            "Construire un test booléen avec une frontière précise.",
+            "Traduire une règle en branches exclusives."
+          ],
+          "exercises": [
+            { "id": "snt-conditions-ex1" },
+            { "id": "snt-conditions-ex2" },
+            { "id": "snt-conditions-ex3" }
+          ]
+        },
+        {
+          "id": "snt-boucles",
+          "title": "Répéter et tester un modèle",
+          "duration": 40,
+          "objectives": [
+            "Parcourir une collection avec une boucle bornée.",
+            "Garantir la progression d’une boucle while."
+          ],
+          "exercises": [
+            { "id": "snt-boucles-ex1" },
+            { "id": "snt-boucles-ex2" },
+            { "id": "snt-boucles-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "internet",
+      "title": "Internet",
+      "description": "Paquets, adresses, DNS et supports : comprendre comment un réseau de réseaux transporte les données.",
+      "lessons": [
+        {
+          "id": "snt-paquets",
+          "title": "Transporter des paquets sans promettre une heure d’arrivée",
+          "duration": 40,
+          "objectives": [
+            "Distinguer adressage, routage et fiabilisation.",
+            "Expliquer pourquoi une panne ou une congestion affecte les délais."
+          ],
+          "exercises": [
+            { "id": "snt-paquets-ex1" },
+            { "id": "snt-paquets-ex2" },
+            { "id": "snt-paquets-ex3" }
+          ]
+        },
+        {
+          "id": "snt-dns",
+          "title": "Des noms aux adresses avec DNS",
+          "duration": 35,
+          "objectives": [
+            "Distinguer nom de domaine, adresse IP et URL.",
+            "Interpréter une résolution directe et une résolution inverse."
+          ],
+          "exercises": [{ "id": "snt-dns-ex1" }, { "id": "snt-dns-ex2" }, { "id": "snt-dns-ex3" }]
+        },
+        {
+          "id": "snt-supports-p2p",
+          "title": "Supports, pair-à-pair et croissance du trafic",
+          "duration": 40,
+          "objectives": [
+            "Comparer architectures logiques et supports physiques.",
+            "Calculer un ordre de grandeur de trafic sans confondre volume et débit."
+          ],
+          "exercises": [
+            { "id": "snt-supports-p2p-ex1" },
+            { "id": "snt-supports-p2p-ex2" },
+            { "id": "snt-supports-p2p-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Le Web",
+      "description": "Construire une page, lire les échanges HTTP, rechercher et publier avec discernement.",
+      "lessons": [
+        {
+          "id": "snt-html-css",
+          "title": "Construire une page et relier ses contenus",
+          "duration": 45,
+          "objectives": [
+            "Modifier une structure HTML accessible.",
+            "Séparer la signification du contenu de sa présentation CSS."
+          ],
+          "exercises": [
+            { "id": "snt-html-css-ex1" },
+            { "id": "snt-html-css-ex2" },
+            { "id": "snt-html-css-ex3" }
+          ]
+        },
+        {
+          "id": "snt-http",
+          "title": "Lire une URL et un dialogue client-serveur",
+          "duration": 40,
+          "objectives": [
+            "Décomposer URL et paramètres d’une requête.",
+            "Localiser les traitements dans le client ou dans le serveur."
+          ],
+          "exercises": [
+            { "id": "snt-http-ex1" },
+            { "id": "snt-http-ex2" },
+            { "id": "snt-http-ex3" }
+          ]
+        },
+        {
+          "id": "snt-recherche-publication",
+          "title": "Chercher, vérifier et publier",
+          "duration": 40,
+          "objectives": [
+            "Distinguer exploration, indexation et classement.",
+            "Vérifier une information et les droits de sa réutilisation."
+          ],
+          "exercises": [
+            { "id": "snt-recherche-publication-ex1" },
+            { "id": "snt-recherche-publication-ex2" },
+            { "id": "snt-recherche-publication-ex3" }
+          ]
+        },
+        {
+          "id": "snt-traces",
+          "title": "Limiter les traces et reconnaître les pièges",
+          "duration": 35,
+          "objectives": [
+            "Distinguer traces locales et traces distantes.",
+            "Choisir des réglages de confidentialité et examiner une pièce jointe."
+          ],
+          "exercises": [
+            { "id": "snt-traces-ex1" },
+            { "id": "snt-traces-ex2" },
+            { "id": "snt-traces-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reseaux",
+      "title": "Les réseaux sociaux",
+      "description": "Identités, économie de l’attention, graphes de relations et réponses aux cyberviolences.",
+      "lessons": [
+        {
+          "id": "snt-identites-revenus",
+          "title": "Identités, audiences et modèles économiques",
+          "duration": 40,
+          "objectives": [
+            "Séparer identification, authentification et réputation.",
+            "Comparer les usages, les audiences et les sources de revenus."
+          ],
+          "exercises": [
+            { "id": "snt-identites-revenus-ex1" },
+            { "id": "snt-identites-revenus-ex2" },
+            { "id": "snt-identites-revenus-ex3" }
+          ]
+        },
+        {
+          "id": "snt-graphes-sociaux",
+          "title": "Mesurer les distances et comprendre les communautés",
+          "duration": 45,
+          "objectives": [
+            "Calculer excentricité, rayon, diamètre et centre.",
+            "Expliquer l’influence des relations sur les recommandations."
+          ],
+          "exercises": [
+            { "id": "snt-graphes-sociaux-ex1" },
+            { "id": "snt-graphes-sociaux-ex2" },
+            { "id": "snt-graphes-sociaux-ex3" }
+          ]
+        },
+        {
+          "id": "snt-cyberviolence",
+          "title": "Reconnaître les cyberviolences et agir",
+          "duration": 35,
+          "objectives": [
+            "Comprendre la répétition individuelle ou collective du harcèlement.",
+            "Identifier une conduite de soutien et les ressources adaptées."
+          ],
+          "exercises": [
+            { "id": "snt-cyberviolence-ex1" },
+            { "id": "snt-cyberviolence-ex2" },
+            { "id": "snt-cyberviolence-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donnees",
+      "title": "Les données structurées",
+      "description": "Décrire, importer, filtrer et croiser des collections, puis partager et sauvegarder les fichiers.",
+      "lessons": [
+        {
+          "id": "snt-descrire-donnees",
+          "title": "Décrire une collection et lire un fichier CSV",
+          "duration": 40,
+          "objectives": [
+            "Distinguer objet, descripteur et valeur.",
+            "Choisir un format et documenter une donnée ouverte ou personnelle."
+          ],
+          "exercises": [
+            { "id": "snt-descrire-donnees-ex1" },
+            { "id": "snt-descrire-donnees-ex2" },
+            { "id": "snt-descrire-donnees-ex3" }
+          ]
+        },
+        {
+          "id": "snt-traiter-tables",
+          "title": "Filtrer, trier et croiser des tables",
+          "duration": 45,
+          "objectives": [
+            "Appliquer un filtre avant un calcul.",
+            "Croiser deux tables au moyen d’un identifiant commun."
+          ],
+          "exercises": [
+            { "id": "snt-traiter-tables-ex1" },
+            { "id": "snt-traiter-tables-ex2" },
+            { "id": "snt-traiter-tables-ex3" }
+          ]
+        },
+        {
+          "id": "snt-cloud",
+          "title": "Métadonnées, synchronisation et énergie du nuage",
+          "duration": 40,
+          "objectives": [
+            "Inspecter des métadonnées et régler un partage.",
+            "Distinguer synchronisation, sauvegarde et consommation électrique."
+          ],
+          "exercises": [
+            { "id": "snt-cloud-ex1" },
+            { "id": "snt-cloud-ex2" },
+            { "id": "snt-cloud-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cartographie",
+      "title": "Localisation, cartographie et mobilité",
+      "description": "Des signaux satellites aux couches cartographiques, aux contributions et aux itinéraires.",
+      "lessons": [
+        {
+          "id": "snt-gnss-nmea",
+          "title": "Se positionner et décoder une trame NMEA",
+          "duration": 45,
+          "objectives": [
+            "Expliquer une mesure de distance par temps de propagation.",
+            "Convertir degrés et minutes en degrés décimaux."
+          ],
+          "exercises": [
+            { "id": "snt-gnss-nmea-ex1" },
+            { "id": "snt-gnss-nmea-ex2" },
+            { "id": "snt-gnss-nmea-ex3" }
+          ]
+        },
+        {
+          "id": "snt-couches-osm",
+          "title": "Choisir des couches et contribuer à une carte",
+          "duration": 40,
+          "objectives": [
+            "Sélectionner une couche selon la question posée.",
+            "Préparer une contribution OSM vérifiée et documentée."
+          ],
+          "exercises": [
+            { "id": "snt-couches-osm-ex1" },
+            { "id": "snt-couches-osm-ex2" },
+            { "id": "snt-couches-osm-ex3" }
+          ]
+        },
+        {
+          "id": "snt-itineraires",
+          "title": "Calculer un itinéraire et maîtriser son partage de position",
+          "duration": 40,
+          "objectives": [
+            "Comparer des chemins selon un critère annoncé.",
+            "Distinguer calcul local de position et transmission à une application."
+          ],
+          "exercises": [
+            { "id": "snt-itineraires-ex1" },
+            { "id": "snt-itineraires-ex2" },
+            { "id": "snt-itineraires-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embarquee",
+      "title": "Informatique embarquée et objets connectés",
+      "description": "Relier capteurs, programmes, interfaces et actionneurs dans des modèles de systèmes physiques.",
+      "lessons": [
+        {
+          "id": "snt-capteurs-actionneurs",
+          "title": "Acquérir, décider et agir",
+          "duration": 45,
+          "objectives": [
+            "Identifier la chaîne capteur-programme-actionneur.",
+            "Programmer un contrôle à seuil sur des mesures simulées."
+          ],
+          "exercises": [
+            { "id": "snt-capteurs-actionneurs-ex1" },
+            { "id": "snt-capteurs-actionneurs-ex2" },
+            { "id": "snt-capteurs-actionneurs-ex3" }
+          ]
+        },
+        {
+          "id": "snt-ihm-objet",
+          "title": "Construire une IHM et coder les commandes",
+          "duration": 45,
+          "objectives": [
+            "Construire une interface lisible d’un objet simulé.",
+            "Valider et décoder une commande d’actionneur."
+          ],
+          "exercises": [
+            { "id": "snt-ihm-objet-ex1" },
+            { "id": "snt-ihm-objet-ex2" },
+            { "id": "snt-ihm-objet-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "photographie",
+      "title": "La photographie numérique",
+      "description": "Du photosite au fichier : couleurs, métadonnées et transformations d’images en Python.",
+      "lessons": [
+        {
+          "id": "snt-photosites-exif",
+          "title": "Du photosite au pixel, avec les métadonnées",
+          "duration": 40,
+          "objectives": [
+            "Distinguer capteur, définition d’image et profondeur de couleur.",
+            "Lire des métadonnées sans leur attribuer une preuve absolue."
+          ],
+          "exercises": [
+            { "id": "snt-photosites-exif-ex1" },
+            { "id": "snt-photosites-exif-ex2" },
+            { "id": "snt-photosites-exif-ex3" }
+          ]
+        },
+        {
+          "id": "snt-transformer-pixels",
+          "title": "Transformer une image en agissant sur ses pixels",
+          "duration": 50,
+          "objectives": [
+            "Transformer les trois composantes RVB.",
+            "Parcourir une matrice d’image sans confondre ligne et colonne."
+          ],
+          "exercises": [
+            { "id": "snt-transformer-pixels-ex1" },
+            { "id": "snt-transformer-pixels-ex2" },
+            { "id": "snt-transformer-pixels-ex3" }
+          ]
+        },
+        {
+          "id": "snt-fabriquer-photo",
+          "title": "Comprendre les algorithmes de fabrication d’une photo",
+          "duration": 40,
+          "objectives": [
+            "Situer les traitements avant et après la capture.",
+            "Expliquer les compromis d’une fusion et d’une compression."
+          ],
+          "exercises": [
+            { "id": "snt-fabriquer-photo-ex1" },
+            { "id": "snt-fabriquer-photo-ex2" },
+            { "id": "snt-fabriquer-photo-ex3" }
+          ]
+        }
+      ]
+    }
+  ],
+  "premiere": [
+    {
+      "id": "histoire",
+      "title": "Une histoire des idées et des machines",
+      "description": "Des algorithmes anciens à la machine universelle et au Web.",
+      "lessons": [
+        {
+          "id": "premiere-histoire",
+          "title": "Des procédures aux machines universelles",
+          "duration": 30,
+          "objectives": [
+            "Placer des repères historiques et expliquer ce qui change à chaque étape."
+          ],
+          "exercises": [{ "id": "p-h1" }, { "id": "p-h2" }, { "id": "p-h3" }]
+        }
+      ]
+    },
+    {
+      "id": "representations",
+      "title": "Représenter les données",
+      "description": "Bases, entiers signés, flottants, logique et encodages.",
+      "lessons": [
+        {
+          "id": "premiere-bases",
+          "title": "Bases, octets et hexadécimal",
+          "duration": 40,
+          "objectives": [
+            "Convertir entre bases 2, 10 et 16.",
+            "Relier longueur binaire et plage de valeurs."
+          ],
+          "exercises": [{ "id": "p-b1" }, { "id": "p-b2" }, { "id": "p-b3" }]
+        },
+        {
+          "id": "premiere-signes",
+          "title": "Entiers signés et complément à deux",
+          "duration": 35,
+          "objectives": [
+            "Coder un entier négatif sur une taille fixée.",
+            "Détecter une valeur hors domaine."
+          ],
+          "exercises": [{ "id": "p-s1" }, { "id": "p-s2" }, { "id": "p-s3" }]
+        },
+        {
+          "id": "premiere-flottants",
+          "title": "Approcher les réels avec des flottants",
+          "duration": 35,
+          "objectives": [
+            "Développer une fraction en base 2.",
+            "Comparer des résultats approchés avec une tolérance."
+          ],
+          "exercises": [{ "id": "p-f1" }, { "id": "p-f2" }, { "id": "p-f3" }]
+        },
+        {
+          "id": "premiere-logique",
+          "title": "Booléens, tables et circuits",
+          "duration": 35,
+          "objectives": [
+            "Construire une table de vérité.",
+            "Distinguer ET, OU inclusif, XOR et négation."
+          ],
+          "exercises": [{ "id": "p-lb1" }, { "id": "p-lb2" }, { "id": "p-lb3" }]
+        },
+        {
+          "id": "premiere-encodages",
+          "title": "Caractères, octets et encodages",
+          "duration": 35,
+          "objectives": [
+            "Différencier caractère, point de code et octets.",
+            "Transcoder un texte sans perdre ses caractères."
+          ],
+          "exercises": [{ "id": "p-e1" }, { "id": "p-e2" }, { "id": "p-e3" }]
+        }
+      ]
+    },
+    {
+      "id": "construits",
+      "title": "Construire et parcourir des données",
+      "description": "Tuples, tableaux, matrices et dictionnaires en Python.",
+      "lessons": [
+        {
+          "id": "premiere-tuples",
+          "title": "Renvoyer plusieurs résultats avec un tuple",
+          "duration": 25,
+          "objectives": ["Regrouper et décomposer plusieurs valeurs."],
+          "exercises": [{ "id": "p-c1" }, { "id": "p-c2" }, { "id": "p-c3" }]
+        },
+        {
+          "id": "premiere-listes",
+          "title": "Tableaux, indices et compréhensions",
+          "duration": 40,
+          "objectives": [
+            "Modifier une case et parcourir un tableau.",
+            "Construire une sélection en compréhension."
+          ],
+          "exercises": [{ "id": "p-li1" }, { "id": "p-li2" }, { "id": "p-li3" }]
+        },
+        {
+          "id": "premiere-matrices",
+          "title": "Des tableaux de tableaux aux matrices",
+          "duration": 35,
+          "objectives": [
+            "Accéder à une case par ligne puis colonne.",
+            "Parcourir une matrice et créer des lignes indépendantes."
+          ],
+          "exercises": [{ "id": "p-ma1" }, { "id": "p-ma2" }, { "id": "p-ma3" }]
+        },
+        {
+          "id": "premiere-dictionnaires",
+          "title": "Dictionnaires et enregistrements nommés",
+          "duration": 35,
+          "objectives": [
+            "Créer et modifier une association.",
+            "Choisir entre keys, values et items."
+          ],
+          "exercises": [{ "id": "p-d1" }, { "id": "p-d2" }, { "id": "p-d3" }]
+        }
+      ]
+    },
+    {
+      "id": "tables",
+      "title": "Exploiter des tables",
+      "description": "CSV, sélection, cohérence, tri et fusion.",
+      "lessons": [
+        {
+          "id": "premiere-csv",
+          "title": "Importer une table CSV et typer les données",
+          "duration": 40,
+          "objectives": [
+            "Lire des descripteurs et des lignes.",
+            "Convertir et vérifier les domaines de valeurs."
+          ],
+          "exercises": [{ "id": "p-t1" }, { "id": "p-t2" }, { "id": "p-t3" }]
+        },
+        {
+          "id": "premiere-selection-tri",
+          "title": "Sélectionner, contrôler et trier une table",
+          "duration": 40,
+          "objectives": [
+            "Combiner des critères de sélection.",
+            "Repérer doublons et incohérences.",
+            "Trier selon une clé numérique."
+          ],
+          "exercises": [{ "id": "p-t4" }, { "id": "p-t5" }, { "id": "p-t6" }]
+        },
+        {
+          "id": "premiere-fusion",
+          "title": "Fusionner des tables sur une clé",
+          "duration": 35,
+          "objectives": [
+            "Relier deux tables par une clé commune.",
+            "Anticiper absences et clés multiples."
+          ],
+          "exercises": [{ "id": "p-fu1" }, { "id": "p-fu2" }, { "id": "p-fu3" }]
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Interagir sur le Web",
+      "description": "Interfaces, événements, HTTP, formulaires et HTTPS.",
+      "lessons": [
+        {
+          "id": "premiere-evenements",
+          "title": "Composants graphiques et événements",
+          "duration": 40,
+          "objectives": [
+            "Relier structure HTML et comportement JavaScript.",
+            "Modifier la fonction appelée par un clic."
+          ],
+          "exercises": [{ "id": "p-w1" }, { "id": "p-w2" }, { "id": "p-w3" }]
+        },
+        {
+          "id": "premiere-http",
+          "title": "Client, serveur, état et HTTPS",
+          "duration": 35,
+          "objectives": [
+            "Remettre une interaction réseau dans l’ordre.",
+            "Distinguer mémoire locale, transmission et chiffrement."
+          ],
+          "exercises": [{ "id": "p-w4" }, { "id": "p-w5" }, { "id": "p-w6" }]
+        },
+        {
+          "id": "premiere-formulaires",
+          "title": "Formulaires et paramètres GET ou POST",
+          "duration": 35,
+          "objectives": [
+            "Lire action, method, name et value.",
+            "Choisir un mode d’envoi adapté à l’usage."
+          ],
+          "exercises": [{ "id": "p-w7" }, { "id": "p-w8" }, { "id": "p-w9" }]
+        }
+      ]
+    },
+    {
+      "id": "machines",
+      "title": "Machines, réseaux et systèmes",
+      "description": "Processeur, circuits, paquets, Linux et objets connectés.",
+      "lessons": [
+        {
+          "id": "premiere-processeur",
+          "title": "Processeur, mémoire et circuits combinatoires",
+          "duration": 45,
+          "objectives": [
+            "Décrire le rôle des constituants.",
+            "Tracer des instructions élémentaires.",
+            "Relier un circuit à une fonction booléenne."
+          ],
+          "exercises": [{ "id": "p-m1" }, { "id": "p-m2" }, { "id": "p-m3" }]
+        },
+        {
+          "id": "premiere-reseaux",
+          "title": "Paquets, encapsulation et protocole du bit alterné",
+          "duration": 45,
+          "objectives": [
+            "Expliquer le découpage et les couches.",
+            "Simuler perte, accusé et retransmission sans doublon."
+          ],
+          "exercises": [{ "id": "p-r1" }, { "id": "p-r2" }, { "id": "p-r3" }]
+        },
+        {
+          "id": "premiere-systemes",
+          "title": "Linux, fichiers, commandes et permissions",
+          "duration": 40,
+          "objectives": [
+            "Identifier les services du système.",
+            "Naviguer et régler des permissions dans un terminal."
+          ],
+          "exercises": [{ "id": "p-os1" }, { "id": "p-os2" }, { "id": "p-os3" }]
+        },
+        {
+          "id": "premiere-capteurs",
+          "title": "Capteurs, actionneurs et cahier des charges",
+          "duration": 35,
+          "objectives": [
+            "Relier une mesure à une commande.",
+            "Traduire une règle d’interface en programme testable."
+          ],
+          "exercises": [{ "id": "p-ca1" }, { "id": "p-ca2" }, { "id": "p-ca3" }]
+        }
+      ]
+    },
+    {
+      "id": "programmation",
+      "title": "Écrire des programmes fiables",
+      "description": "Constructions, contrats, tests, bibliothèques et langages.",
+      "lessons": [
+        {
+          "id": "premiere-constructions",
+          "title": "Affectations, conditions et boucles",
+          "duration": 40,
+          "objectives": [
+            "Composer des instructions élémentaires.",
+            "Choisir entre boucle bornée et boucle conditionnelle."
+          ],
+          "exercises": [{ "id": "p-pr1" }, { "id": "p-pr2" }, { "id": "p-pr3" }]
+        },
+        {
+          "id": "premiere-contrats",
+          "title": "Fonctions, prototypes et contrats",
+          "duration": 40,
+          "objectives": [
+            "Définir entrées et sortie.",
+            "Exprimer et vérifier préconditions et postconditions."
+          ],
+          "exercises": [{ "id": "p-co1" }, { "id": "p-co2" }, { "id": "p-co3" }]
+        },
+        {
+          "id": "premiere-tests",
+          "title": "Mettre au point avec des jeux de tests",
+          "duration": 35,
+          "objectives": [
+            "Construire des tests nominaux, limites et invalides.",
+            "Chercher un contre-exemple à un programme."
+          ],
+          "exercises": [{ "id": "p-te1" }, { "id": "p-te2" }, { "id": "p-te3" }]
+        },
+        {
+          "id": "premiere-langages-bibliotheques",
+          "title": "Bibliothèques, modules et diversité des langages",
+          "duration": 40,
+          "objectives": [
+            "Lire la documentation d’une fonction.",
+            "Réutiliser un module.",
+            "Reconnaître des constructions dans un autre langage."
+          ],
+          "exercises": [{ "id": "p-bi1" }, { "id": "p-bi2" }, { "id": "p-bi3" }]
+        }
+      ]
+    },
+    {
+      "id": "algorithmique",
+      "title": "Choisir et justifier des algorithmes",
+      "description": "Parcours, tris, dichotomie, voisins et choix gloutons.",
+      "lessons": [
+        {
+          "id": "premiere-parcours",
+          "title": "Rechercher, calculer extrema et moyennes",
+          "duration": 45,
+          "objectives": [
+            "Programmer un parcours linéaire.",
+            "Justifier l’initialisation d’un extremum.",
+            "Comparer les coûts en nombre d’éléments."
+          ],
+          "exercises": [{ "id": "p-al1" }, { "id": "p-al2" }, { "id": "p-al3" }]
+        },
+        {
+          "id": "premiere-insertion",
+          "title": "Trier par insertion et prouver le préfixe trié",
+          "duration": 45,
+          "objectives": [
+            "Insérer une valeur dans un préfixe trié.",
+            "Expliquer invariant, terminaison et coût quadratique."
+          ],
+          "exercises": [{ "id": "p-in1" }, { "id": "p-in2" }, { "id": "p-in3" }]
+        },
+        {
+          "id": "premiere-selection",
+          "title": "Trier par sélection et justifier le minimum restant",
+          "duration": 40,
+          "objectives": [
+            "Sélectionner le minimum d’un suffixe.",
+            "Prouver le tri et comparer les coûts."
+          ],
+          "exercises": [{ "id": "p-se1" }, { "id": "p-se2" }, { "id": "p-se3" }]
+        },
+        {
+          "id": "premiere-dichotomie",
+          "title": "Dichotomie et variant de boucle",
+          "duration": 45,
+          "objectives": [
+            "Réduire un intervalle de recherche.",
+            "Prouver la terminaison avec la longueur restante."
+          ],
+          "exercises": [{ "id": "p-di1" }, { "id": "p-di2" }, { "id": "p-di3" }]
+        },
+        {
+          "id": "premiere-knn",
+          "title": "Prédire par les k plus proches voisins",
+          "duration": 45,
+          "objectives": [
+            "Calculer des distances et sélectionner k voisins.",
+            "Prédire une classe majoritaire en annonçant les conventions."
+          ],
+          "exercises": [{ "id": "p-kn1" }, { "id": "p-kn2" }, { "id": "p-kn3" }]
+        },
+        {
+          "id": "premiere-gloutons",
+          "title": "Choix gloutons et limites de l’optimalité",
+          "duration": 40,
+          "objectives": [
+            "Exprimer un choix local.",
+            "Comparer une solution gloutonne à un contre-exemple optimal."
+          ],
+          "exercises": [{ "id": "p-gl1" }, { "id": "p-gl2" }, { "id": "p-gl3" }]
+        }
+      ]
+    }
+  ],
+  "terminale": [
+    {
+      "id": "histoire",
+      "title": "Histoire de l’informatique",
+      "description": "Des machines universelles aux systèmes connectés : personnes, idées et techniques.",
+      "lessons": [
+        {
+          "id": "terminale-histoire",
+          "title": "Une même machine, plusieurs programmes",
+          "duration": 35,
+          "objectives": [
+            "Relier une date à une idée et à ses protagonistes",
+            "Expliquer le rôle du programme enregistré",
+            "Distinguer évolution logicielle et intégration matérielle"
+          ],
+          "exercises": [
+            { "id": "terminale-histoire-ex1" },
+            { "id": "terminale-histoire-ex2" },
+            { "id": "terminale-histoire-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structures",
+      "title": "Structures de données",
+      "description": "Interfaces, objets, structures linéaires, arbres et représentations de graphes.",
+      "lessons": [
+        {
+          "id": "terminale-interfaces",
+          "title": "L’interface promet, l’implémentation réalise",
+          "duration": 35,
+          "objectives": [
+            "Spécifier les opérations d’une file",
+            "Distinguer contrat et choix de stockage",
+            "Comparer deux implémentations de FIFO"
+          ],
+          "exercises": [
+            { "id": "terminale-interfaces-ex1" },
+            { "id": "terminale-interfaces-ex2" },
+            { "id": "terminale-interfaces-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-objets",
+          "title": "Classes, attributs et méthodes",
+          "duration": 35,
+          "objectives": [
+            "Définir une classe avec un constructeur",
+            "Accéder à des attributs et appeler des méthodes",
+            "Préserver un invariant sur des objets distincts"
+          ],
+          "exercises": [
+            { "id": "terminale-objets-ex1" },
+            { "id": "terminale-objets-ex2" },
+            { "id": "terminale-objets-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-listes",
+          "title": "Listes chaînées et tableaux dynamiques",
+          "duration": 35,
+          "objectives": [
+            "Décrire les cellules d’une liste chaînée",
+            "Parcourir une liste jusqu’à None",
+            "Choisir entre accès indicé et chaînage"
+          ],
+          "exercises": [
+            { "id": "terminale-listes-ex1" },
+            { "id": "terminale-listes-ex2" },
+            { "id": "terminale-listes-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-piles-files",
+          "title": "Piles et files : choisir l’ordre de sortie",
+          "duration": 35,
+          "objectives": [
+            "Distinguer FIFO et LIFO",
+            "Écrire les opérations d’une pile",
+            "Utiliser une pile pour contrôler des parenthèses"
+          ],
+          "exercises": [
+            { "id": "terminale-piles-files-ex1" },
+            { "id": "terminale-piles-files-ex2" },
+            { "id": "terminale-piles-files-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-dictionnaires",
+          "title": "Dictionnaires : accéder par une clé",
+          "duration": 35,
+          "objectives": [
+            "Distinguer une clé d’une valeur",
+            "Comparer recherche séquentielle et accès par clé",
+            "Construire un index de fréquences"
+          ],
+          "exercises": [
+            { "id": "terminale-dictionnaires-ex1" },
+            { "id": "terminale-dictionnaires-ex2" },
+            { "id": "terminale-dictionnaires-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-arbres-structure",
+          "title": "Arbres : organiser une hiérarchie",
+          "duration": 35,
+          "objectives": [
+            "Reconnaître racine, feuille et sous-arbres",
+            "Distinguer taille et hauteur avec une convention",
+            "Encadrer la taille d’un arbre binaire"
+          ],
+          "exercises": [
+            { "id": "terminale-arbres-structure-ex1" },
+            { "id": "terminale-arbres-structure-ex2" },
+            { "id": "terminale-arbres-structure-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-graphes-structure",
+          "title": "Graphes : matrices et listes de voisins",
+          "duration": 35,
+          "objectives": [
+            "Modéliser sommets, arcs et arêtes",
+            "Construire matrice et listes d’adjacence",
+            "Convertir les représentations et calculer les prédécesseurs"
+          ],
+          "exercises": [
+            { "id": "terminale-graphes-structure-ex1" },
+            { "id": "terminale-graphes-structure-ex2" },
+            { "id": "terminale-graphes-structure-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bases",
+      "title": "Bases de données",
+      "description": "Modéliser, interroger et modifier une base relationnelle dans un vrai moteur SQL.",
+      "lessons": [
+        {
+          "id": "terminale-modele-relationnel",
+          "title": "Schéma, intégrité, anomalies et SGBD",
+          "duration": 35,
+          "objectives": [
+            "Distinguer schéma relationnel et contenu",
+            "Repérer une anomalie et une contrainte d’intégrité",
+            "Expliquer persistance, concurrence, efficacité et droits du SGBD"
+          ],
+          "exercises": [
+            { "id": "terminale-modele-relationnel-ex1" },
+            { "id": "terminale-modele-relationnel-ex2" },
+            { "id": "terminale-modele-relationnel-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-sql-selection",
+          "title": "SQL : projeter, filtrer et trier",
+          "duration": 35,
+          "objectives": [
+            "Lire SELECT, FROM et WHERE",
+            "Combiner filtres et ordre de sortie",
+            "Distinguer lignes, valeurs distinctes et agrégats"
+          ],
+          "exercises": [
+            { "id": "terminale-sql-selection-ex1" },
+            { "id": "terminale-sql-selection-ex2" },
+            { "id": "terminale-sql-selection-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-sql-jointures",
+          "title": "SQL : relier plusieurs relations",
+          "duration": 35,
+          "objectives": [
+            "Relier les clés dans une jointure",
+            "Préfixer les attributs avec des alias",
+            "Comprendre répétitions et absence de correspondance"
+          ],
+          "exercises": [
+            { "id": "terminale-sql-jointures-ex1" },
+            { "id": "terminale-sql-jointures-ex2" },
+            { "id": "terminale-sql-jointures-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-sql-modifications",
+          "title": "SQL : insérer, mettre à jour, supprimer",
+          "duration": 35,
+          "objectives": [
+            "Insérer une ligne avec ses attributs",
+            "Limiter UPDATE et DELETE avec WHERE",
+            "Vérifier une modification et anticiper les contraintes"
+          ],
+          "exercises": [
+            { "id": "terminale-sql-modifications-ex1" },
+            { "id": "terminale-sql-modifications-ex2" },
+            { "id": "terminale-sql-modifications-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architectures",
+      "title": "Architectures, systèmes et réseaux",
+      "description": "Systèmes sur puce, processus, routage et communications sécurisées.",
+      "lessons": [
+        {
+          "id": "terminale-soc",
+          "title": "Systèmes sur puce : rapprocher les composants",
+          "duration": 35,
+          "objectives": [
+            "Identifier CPU, mémoire et contrôleurs dans un SoC",
+            "Relier intégration, échanges et énergie",
+            "Distinguer composant matériel et interface logicielle"
+          ],
+          "exercises": [
+            { "id": "terminale-soc-ex1" },
+            { "id": "terminale-soc-ex2" },
+            { "id": "terminale-soc-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-processus",
+          "title": "Processus, ordonnancement et interblocage",
+          "duration": 35,
+          "objectives": [
+            "Décrire création et états d’un processus",
+            "Tracer un ordonnancement concurrent",
+            "Reconnaître un interblocage et une prévention"
+          ],
+          "exercises": [
+            { "id": "terminale-processus-ex1" },
+            { "id": "terminale-processus-ex2" },
+            { "id": "terminale-processus-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-routage",
+          "title": "RIP et OSPF : quelle route optimiser ?",
+          "duration": 35,
+          "objectives": [
+            "Lire destination, interface et prochain saut",
+            "Choisir une route selon la métrique RIP",
+            "Additionner les coûts OSPF sans confondre débit et coût"
+          ],
+          "exercises": [
+            { "id": "terminale-routage-ex1" },
+            { "id": "terminale-routage-ex2" },
+            { "id": "terminale-routage-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-cryptographie",
+          "title": "Clés partagées, clés publiques et HTTPS",
+          "duration": 35,
+          "objectives": [
+            "Expliquer chiffrement symétrique et asymétrique",
+            "Relier authentification et établissement d’un secret",
+            "Décrire le modèle hybride d’HTTPS et ses limites"
+          ],
+          "exercises": [
+            { "id": "terminale-cryptographie-ex1" },
+            { "id": "terminale-cryptographie-ex2" },
+            { "id": "terminale-cryptographie-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programmation",
+      "title": "Langages et programmation",
+      "description": "Calculabilité, récursivité, modularité, paradigmes et mise au point.",
+      "lessons": [
+        {
+          "id": "terminale-calculabilite",
+          "title": "Programme comme donnée et problème de l’arrêt",
+          "duration": 35,
+          "objectives": [
+            "Expliquer comment un programme devient la donnée d’un autre",
+            "Distinguer calculabilité et efficacité",
+            "Reconstituer la contradiction du problème de l’arrêt"
+          ],
+          "exercises": [
+            { "id": "terminale-calculabilite-ex1" },
+            { "id": "terminale-calculabilite-ex2" },
+            { "id": "terminale-calculabilite-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-recursivite",
+          "title": "Récursivité : descendre puis remonter les appels",
+          "duration": 35,
+          "objectives": [
+            "Identifier cas de base et réduction du problème",
+            "Tracer appels et retours récursifs",
+            "Justifier une terminaison et anticiper la pile"
+          ],
+          "exercises": [
+            { "id": "terminale-recursivite-ex1" },
+            { "id": "terminale-recursivite-ex2" },
+            { "id": "terminale-recursivite-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-modules-api",
+          "title": "Modules et API : lire un contrat avant d’appeler",
+          "duration": 35,
+          "objectives": [
+            "Lire signature, domaine et retour d’une API",
+            "Importer et utiliser un module documenté",
+            "Créer un module simple avec sa documentation"
+          ],
+          "exercises": [
+            { "id": "terminale-modules-api-ex1" },
+            { "id": "terminale-modules-api-ex2" },
+            { "id": "terminale-modules-api-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-paradigmes",
+          "title": "Impératif, fonctionnel et objet : trois approches",
+          "duration": 35,
+          "objectives": [
+            "Reconnaître mutation impérative et composition fonctionnelle",
+            "Identifier état et méthodes dans une approche objet",
+            "Choisir une approche adaptée à une transformation ou un modèle"
+          ],
+          "exercises": [
+            { "id": "terminale-paradigmes-ex1" },
+            { "id": "terminale-paradigmes-ex2" },
+            { "id": "terminale-paradigmes-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-bugs",
+          "title": "Mettre au point : isoler, corriger, retester",
+          "duration": 35,
+          "objectives": [
+            "Construire un contre-exemple minimal",
+            "Corriger bornes, effets de bord et conditions incomplètes",
+            "Traiter types, flottants et noms sans masquer les erreurs"
+          ],
+          "exercises": [
+            { "id": "terminale-bugs-ex1" },
+            { "id": "terminale-bugs-ex2" },
+            { "id": "terminale-bugs-ex3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algorithmique",
+      "title": "Algorithmique",
+      "description": "Parcours, arbres de recherche, fusion, programmation dynamique et Boyer-Moore.",
+      "lessons": [
+        {
+          "id": "terminale-parcours-arbres",
+          "title": "Mesurer un arbre et le parcourir dans quatre ordres",
+          "duration": 35,
+          "objectives": [
+            "Calculer taille et hauteur récursivement",
+            "Tracer préfixe, infixe et suffixe",
+            "Utiliser une file pour parcourir en largeur"
+          ],
+          "exercises": [
+            { "id": "terminale-parcours-arbres-ex1" },
+            { "id": "terminale-parcours-arbres-ex2" },
+            { "id": "terminale-parcours-arbres-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-abr",
+          "title": "Arbre binaire de recherche : chercher et insérer",
+          "duration": 35,
+          "objectives": [
+            "Utiliser la propriété globale d’un ABR",
+            "Rechercher en éliminant un sous-arbre",
+            "Insérer une clé sans perdre les clés existantes"
+          ],
+          "exercises": [
+            { "id": "terminale-abr-ex1" },
+            { "id": "terminale-abr-ex2" },
+            { "id": "terminale-abr-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-parcours-graphes",
+          "title": "Graphes : profondeur, largeur, chemins et cycles",
+          "duration": 35,
+          "objectives": [
+            "Distinguer parcours en profondeur et en largeur",
+            "Reconstruire un chemin depuis les prédécesseurs",
+            "Détecter un cycle sans confondre retour au parent"
+          ],
+          "exercises": [
+            { "id": "terminale-parcours-graphes-ex1" },
+            { "id": "terminale-parcours-graphes-ex2" },
+            { "id": "terminale-parcours-graphes-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-tri-fusion",
+          "title": "Diviser pour régner et tri fusion",
+          "duration": 35,
+          "objectives": [
+            "Séparer division, résolution et combinaison",
+            "Fusionner deux listes déjà triées",
+            "Expliquer le coût en n log2(n) du tri fusion"
+          ],
+          "exercises": [
+            { "id": "terminale-tri-fusion-ex1" },
+            { "id": "terminale-tri-fusion-ex2" },
+            { "id": "terminale-tri-fusion-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-dynamique",
+          "title": "Programmation dynamique : mémoriser les sous-problèmes",
+          "duration": 35,
+          "objectives": [
+            "Repérer des sous-problèmes recouvrants",
+            "Construire une table dans un ordre de dépendances",
+            "Comparer une décision gloutonne et un optimum dynamique"
+          ],
+          "exercises": [
+            { "id": "terminale-dynamique-ex1" },
+            { "id": "terminale-dynamique-ex2" },
+            { "id": "terminale-dynamique-ex3" }
+          ]
+        },
+        {
+          "id": "terminale-boyer-moore",
+          "title": "Recherche textuelle et prétraitement de Boyer-Moore",
+          "duration": 35,
+          "objectives": [
+            "Comparer le motif de droite à gauche",
+            "Prétraiter la dernière position des caractères",
+            "Justifier un décalage sans manquer les chevauchements"
+          ],
+          "exercises": [
+            { "id": "terminale-boyer-moore-ex1" },
+            { "id": "terminale-boyer-moore-ex2" },
+            { "id": "terminale-boyer-moore-ex3" }
+          ]
+        }
+      ]
+    }
+  ]
+}
