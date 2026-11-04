@@ -119,7 +119,11 @@ export default {
             ['On exige type == electrique puis etat != -1.', 'Les identifiants 12,28,74 passent les deux tests ; 22 est exclu.', 'Chaque résultat contient la clé et la station. Les tests transmettent les dictionnaires en JSON : leurs clés sont des chaînes.']),
           p('4','Proposer les stations proches','Écris proches(position, stations, flotte). Renvoie [station, distance, identifiants] pour les stations strictement à moins de 800 mètres et possédant au moins un vélo disponible. Les listes respectent l’ordre des dictionnaires. distance est fournie ci-dessous ; pour ces tests, les positions sont des points métriques et non des GPS réels.', 'proches','position, stations, flotte',
             "    resultat = []\n    for nom in stations:\n        d = distance(position, stations[nom])\n        if d < 800:\n            ids = []\n            for v in flotte:\n                if flotte[v]['station'] == nom and flotte[v]['etat'] == 1:\n                    ids.append(v)\n            if ids:\n                resultat.append([nom, d, ids])\n    return resultat",
-            [[[[0,0],{A:[100,0],B:[900,0]},{1:{station:'A',etat:1},2:{station:'B',etat:1}}],[['A',100,['1']]]],[[[[0,0],{A:[800,0]},{1:{station:'A',etat:1}}],[]],[[[[0,0],{A:[10,0]},{1:{station:'A',etat:0}}],[]]],
+            [
+              [[[0,0],{A:[100,0],B:[900,0]},{1:{station:'A',etat:1},2:{station:'B',etat:1}}],[['A',100,['1']]]],
+              [[[0,0],{A:[800,0]},{1:{station:'A',etat:1}}],[]],
+              [[[0,0],{A:[10,0]},{1:{station:'A',etat:0}}],[]]
+            ],
             ['Sépare le filtrage géographique et la recherche de vélos disponibles.', 'Une station proche sans vélo disponible ne doit produire aucune ligne.'],
             ['Pour chaque station, on calcule la distance et on ne poursuit que si elle est strictement inférieure à 800.', 'On parcourt ensuite flotte pour réunir les identifiants disponibles dans cette station.', 'On ajoute une ligne seulement si la liste n’est pas vide. La distance simulée sert à vérifier le filtrage sans modifier l’algorithme prévu pour la fonction GPS supposée par le sujet.'],
             'def distance(p1, p2):\n    return round(((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)**0.5)\n')

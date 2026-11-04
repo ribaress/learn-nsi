@@ -129,6 +129,8 @@ Arrêter le serveur avec **Ctrl+C** dans son terminal. Après une modification d
 
 - **Version de Node trop ancienne** : vérifier `node --version`. Utiliser le lanceur Windows fourni sur cet ordinateur, ou installer une version compatible puis rouvrir le terminal.
 - **Dépendances absentes** : exécuter `npm install` depuis la racine du projet.
+- **Build interrompu après « Sommaires légers des trois niveaux préparés. »** : cette ligne confirme seulement la génération des sommaires des cours. Consulter la suite du journal Vite pour trouver le fichier et la ligne en erreur. Après une modification des annales, exécuter `npm test -- tests/unit/annales.test.js`, puis `npm run build` : le premier charge les sujets du catalogue, le second compile aussi leurs modules chargés à la demande. Une erreur de syntaxe dans une annale peut donc bloquer la publication de tout le site.
+- **Avertissement `npm warn old lockfile`** : le verrou actuel est au format 1. Dans ce cas, npm complète ses métadonnées pendant l’installation ; si l’installation se termine et que le build démarre, chercher la cause de l’échec dans les lignes suivantes du journal.
 - **Port 4173 déjà utilisé** : consulter le site déjà ouvert sur ce port s’il s’agit d’Atelier NSI, ou arrêter son serveur dans le terminal qui l’a lancé avant de recommencer.
 - **Pas de dossier `dist/`** : exécuter `npm run build` avant `npm run preview`.
 - **Python ne se charge pas** : vérifier la connexion et relancer l’exercice. Si les fichiers `public/python/` manquent, exécuter `npm install` ou `npm run build` pour les recréer.

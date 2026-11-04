@@ -270,7 +270,11 @@ Routeur possède interfaces et table. Une Interface possède adresse,masque,file
         if i != i_interf:
             paquet = [adresses[i],vecteurs_par_interface[i]]
             paquets.append([i,paquet])
-    return paquets`,[[[['a','b'],[[['X',0]],[['Y',1]]],0],[[1,['b',[['Y',1]]]]]],[[[['a'],[[]],-1],[[0,['a',[]]]]],[[[['a'],[[]],0],[]]],['Le paquet doit porter l’adresse de l’interface qui l’émet.','La file d’envoi et la file de réception d’une interface ont des rôles différents.'],['On filtre avec if i != i_interf, puis adresse=self.interfaces[i].adresse.','Les vecteurs sont calculés par self.vecteurs(i) ; on forme paquet=(adresse,v).','On enfile dans self.interfaces[i].sortie, la file du réseau. La version testée expose les paquets au lieu d’utiliser les objets File.']),
+    return paquets`,[
+          [[['a','b'],[[['X',0]],[['Y',1]]],0],[[1,['b',[['Y',1]]]]]],
+          [[['a'],[[]],-1],[[0,['a',[]]]]],
+          [[['a'],[[]],0],[]]
+        ],['Le paquet doit porter l’adresse de l’interface qui l’émet.','La file d’envoi et la file de réception d’une interface ont des rôles différents.'],['On filtre avec if i != i_interf, puis adresse=self.interfaces[i].adresse.','Les vecteurs sont calculés par self.vecteurs(i) ; on forme paquet=(adresse,v).','On enfile dans self.interfaces[i].sortie, la file du réseau. La version testée expose les paquets au lieu d’utiliser les objets File.']),
         a('13','Simuler la convergence','Dans la boucle générale : après diffuser sur chaque réseau puis traitement sur chaque routeur, doit-on continuer si au moins une file de réseau est non vide ? oui/non.','oui',['Un traitement peut produire de nouvelles annonces.','Le test d’arrêt doit être fait après leur production.'],['Avant la boucle, chaque routeur appelle envoyer_vecteurs(-1).','À chaque tour on appelle reseau.diffuser() pour tous les réseaux puis routeur.traitement() pour tous les routeurs.','On pose continuer=False puis on le remet à True si un reseau.file n’est pas vide. La boucle s’arrête seulement quand aucun paquet n’attend dans les réseaux.'],'Complète le script à partir de continuer=True et while continuer:, en écrivant les deux parcours puis le calcul du booléen d’arrêt. Utilise les méthodes données ; les réponses des autres questions ne sont pas fournies dans un auxiliaire de test.')
       ]}
     ]
