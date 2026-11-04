@@ -9,6 +9,8 @@ import InteractiveActivity from '../components/courses/InteractiveActivity.vue';
 import RichText from '../components/courses/RichText.vue';
 import GameProgress from '../components/courses/GameProgress.vue';
 import { unlockedStep, exerciseAttempted } from '../domain/learning-path.js';
+import ReadingCheckpoint from '../components/courses/ReadingCheckpoint.vue';
+import DataLab from '../components/courses/DataLab.vue';
 const route = useRoute(),
   lesson = ref(null),
   chapter = ref(null),
@@ -75,6 +77,12 @@ function step(index) {
   current.value.step = index;
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
+function readingEntry(field, index, initial) {
+  current.value[field] ||= {};
+  const key = String(index);
+  if (!current.value[field][key]) current.value[field][key] = initial;
+  return current.value[field][key];
+}
 </script>
 <template>
   <div class="standard-page course-lesson-page">
@@ -109,15 +117,56 @@ function step(index) {
         </button>
       </nav>
       <section v-if="current.step === 0" class="panel course-lesson-content">
+        <section v-if="lesson.introduction" class="lesson-opening">
+          <span class="eyebrow">Partons d’une situation concrète</span>
+          <h2>{{ lesson.introduction.question }}</h2>
+          <p class="opening-story"><RichText :text="lesson.introduction.situation" /></p>
+          <div class="opening-purpose">
+            <strong>Pourquoi apprendre cela ?</strong>
+            <p><RichText :text="lesson.introduction.why" /></p>
+          </div>
+          <h3>Notre chemin, une idée à la fois</h3>
+          <ol>
+            <li v-for="part in lesson.introduction.journey" :key="part">
+              <RichText :text="part" />
+            </li>
+          </ol>
+        </section>
         <div class="course-objectives">
           <h2>Ce que tu vas apprendre</h2>
           <ul>
             <li v-for="objective in lesson.objectives" :key="objective">{{ objective }}</li>
           </ul>
           <p class="small">
-            <strong>Avant de commencer :</strong> {{ lesson.prerequisites.join(' · ') }}
+            <strong>{{
+              lesson.prerequisiteRecap
+                ? 'Tout ce qu’il faut est repris ici :'
+                : 'Avant de commencer :'
+            }}</strong>
+            {{ lesson.prerequisites.join(' · ') }}
           </p>
         </div>
+        <section v-if="lesson.prerequisiteRecap?.length" class="lesson-prerequisites">
+          <h2>Les mots et les outils dont tu as besoin</h2>
+          <p class="small">
+            Ces rappels font partie du cours. Tu peux les relire dès qu’un mot ou un calcul te
+            paraît nouveau.
+          </p>
+          <div class="prerequisite-grid">
+            <article
+              v-for="recap in lesson.prerequisiteRecap"
+              :key="recap.term"
+              class="prerequisite-card"
+            >
+              <h3>{{ recap.term }}</h3>
+              <p><RichText :text="recap.explanation" /></p>
+              <div class="recap-example">
+                <strong>Un exemple tout simple</strong>
+                <p><RichText :text="recap.example" /></p>
+              </div>
+            </article>
+          </div>
+        </section>
         <section
           v-for="(section, index) in lesson.sections"
           :key="section.title"
@@ -126,24 +175,90 @@ function step(index) {
           <span class="eyebrow">Étape {{ index + 1 }}</span>
           <h2>{{ section.title }}</h2>
           <p><RichText :text="section.text" /></p>
+          <div v-if="section.table" class="table-scroll reading-table">
+            <table>
+              <caption>
+                {{
+                  section.table.caption
+                }}
+              </caption>
+              <thead>
+                <tr>
+                  <th
+                    v-for="(column, columnIndex) in section.table.columns"
+                    :key="columnIndex"
+                    scope="col"
+                  >
+                    {{ column }}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
+                  <td v-for="(cell, cellIndex) in row" :key="cellIndex">{{ cell }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <pre v-if="section.code">{{ section.code }}</pre>
+          <div v-if="section.inlineActivity" class="inline-reading-lab">
+            <span class="eyebrow">Essaie tout de suite</span
+            ><DataLab
+              :type="section.inlineActivity.type"
+              :config="section.inlineActivity.config"
+              :state="readingEntry('readingActivities', index, {})"
+            />
+          </div>
+          <ReadingCheckpoint
+            v-if="section.checkpoint"
+            :checkpoint="section.checkpoint"
+            :entry="readingEntry('readingChecks', index, { answer: '', submitted: false })"
+          />
         </section>
-        <h2>Trois exemples pour comprendre</h2>
-        <div class="course-examples">
-          <article
-            v-for="(example, index) in lesson.examples"
-            :key="example.title"
-            class="course-example"
-          >
-            <span class="eyebrow">Exemple {{ index + 1 }}</span>
-            <h3>{{ example.title }}</h3>
-            <p><strong>Situation :</strong> <RichText :text="example.input" /></p>
-            <p><RichText :text="example.reasoning" /></p>
-            <div class="example-result">
-              <strong>Ce que l’on obtient</strong>
-              <p><RichText :text="example.result" /></p>
+        <div :class="{ 'paired-examples': lesson.realLifeExamples?.length }">
+          <section>
+            <h2>Trois exemples pour comprendre</h2>
+            <div class="course-examples">
+              <article
+                v-for="(example, index) in lesson.examples"
+                :key="example.title"
+                class="course-example"
+              >
+                <span class="eyebrow">Exemple {{ index + 1 }}</span>
+                <h3>{{ example.title }}</h3>
+                <p><strong>Situation :</strong> <RichText :text="example.input" /></p>
+                <p><RichText :text="example.reasoning" /></p>
+                <div class="example-result">
+                  <strong>Ce que l’on obtient</strong>
+                  <p><RichText :text="example.result" /></p>
+                </div>
+              </article>
             </div>
-          </article>
+          </section>
+          <section v-if="lesson.realLifeExamples?.length" class="everyday-examples">
+            <h2>Et dans la vie réelle ?</h2>
+            <p class="small">
+              On retrouve la même idée dans des situations familières. Regarde le lien avec le
+              cours, mais aussi la limite de la comparaison.
+            </p>
+            <article
+              v-for="example in lesson.realLifeExamples"
+              :key="example.title"
+              class="life-example"
+            >
+              <span class="eyebrow">Un autre point de vue</span>
+              <h3>{{ example.title }}</h3>
+              <p><RichText :text="example.situation" /></p>
+              <div class="life-connection">
+                <strong>Le lien avec le cours</strong>
+                <p><RichText :text="example.connection" /></p>
+              </div>
+              <p class="analogy-limit">
+                <strong>La comparaison a une limite :</strong>
+                <RichText :text="example.difference" />
+              </p>
+            </article>
+          </section>
         </div>
         <label class="reflection-label"
           >Avant de manipuler, quel objectif de cette leçon peux-tu reformuler avec tes mots

@@ -1,10 +1,12 @@
 import {
-  lesson,
+  lesson as assembleLesson,
   answer as a,
   python as p,
   tableActivity as table,
   networkActivity as net
 } from './authoring.js';
+import pedagogy from './pedagogy-cartographie.js';
+const lesson = (data) => assembleLesson(data, pedagogy[data.id]);
 export default {
   id: 'cartographie',
   title: 'Localisation, cartographie et mobilité',

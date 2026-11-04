@@ -1,4 +1,11 @@
-import { lesson, answer as a, python as p, tableActivity as table } from './authoring.js';
+import {
+  lesson as assembleLesson,
+  answer as a,
+  python as p,
+  tableActivity as table
+} from './authoring.js';
+import pedagogy from './pedagogy-photographie.js';
+const lesson = (data) => assembleLesson(data, pedagogy[data.id]);
 export default {
   id: 'photographie',
   title: 'La photographie numérique',

@@ -31,7 +31,8 @@ import {
   PhPlus,
   PhTrash,
   PhArrowSquareOut,
-  PhSparkle
+  PhSparkle,
+  PhStarFour
 } from '@phosphor-icons/vue';
 defineProps({
   name: String,
@@ -70,7 +71,8 @@ const icons = {
   plus: PhPlus,
   trash: PhTrash,
   external: PhArrowSquareOut,
-  sparkle: PhSparkle
+  sparkle: PhSparkle,
+  starFour: PhStarFour
 };
 </script>
 <template>

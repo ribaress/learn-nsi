@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useProgress } from '../../composables/useProgress.js';
 import { gameSummary } from '../../domain/gamification.js';
+import AppIcon from '../AppIcon.vue';
 defineProps({ compact: Boolean });
 const { progress } = useProgress();
 const game = computed(() => gameSummary(progress));
@@ -9,7 +10,9 @@ const game = computed(() => gameSummary(progress));
 <template>
   <section class="game-progress panel" :class="{ compact }" aria-label="Mon aventure">
     <div class="game-topline">
-      <span class="game-star" aria-hidden="true">✦</span>
+      <span class="game-star" aria-hidden="true"
+        ><AppIcon name="starFour" :size="24" weight="fill"
+      /></span>
       <div>
         <span class="eyebrow">Niveau {{ game.rankLevel }} · {{ game.rank }}</span
         ><strong>{{ game.xp }} XP</strong>

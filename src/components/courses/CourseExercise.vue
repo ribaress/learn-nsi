@@ -6,7 +6,14 @@ import SourceCredit from './SourceCredit.vue';
 import WebLab from './WebLab.vue';
 import { checkAnswer } from '../../domain/course-learning.js';
 import RichText from './RichText.vue';
-const props = defineProps({ exercise: Object, entry: Object, index: Number });
+const props = defineProps({
+  exercise: Object,
+  entry: Object,
+  index: Number,
+  solutionLocked: { type: Boolean, default: false },
+  officialReference: String,
+  label: String
+});
 const feedback = ref(''),
   correct = ref(false);
 const reward = ref('');
@@ -27,7 +34,9 @@ function check() {
   attempt();
   correct.value = checkAnswer(props.exercise, props.entry.answer);
   feedback.value = correct.value
-    ? props.exercise.explanation
+    ? props.solutionLocked
+      ? 'Réponse juste. Poursuis les autres ateliers pour débloquer le corrigé.'
+      : props.exercise.explanation
     : props.exercise.feedbackWrong ||
       'Reprends les données de l’énoncé et essaie avec un exemple plus petit.';
   if (correct.value) success();
@@ -41,7 +50,9 @@ function modelToggle(event) {
     <div class="exercise-heading">
       <span class="exercise-index">{{ index + 1 }}</span>
       <div>
-        <span class="eyebrow">{{ ['Essai guidé', 'Application', 'Transfert'][index] }}</span>
+        <span class="eyebrow">{{
+          label || ['Essai guidé', 'Application', 'Transfert'][index]
+        }}</span>
         <h3>{{ exercise.title }}</h3>
       </div>
       <span v-if="entry.success" class="course-status done"
@@ -116,6 +127,7 @@ function modelToggle(event) {
         :expected="exercise.expected"
         :verify-query="exercise.verifyQuery"
         :ordered="exercise.ordered"
+        :reveal-expected="!solutionLocked"
         @success="success"
         @attempt="attempt"
       />
@@ -127,8 +139,8 @@ function modelToggle(event) {
       @success="success"
       @attempt="attempt"
     />
-    <GoldHints :hints="exercise.hints" :entry="entry" />
-    <details class="comparison exercise-solution" @toggle="modelToggle">
+    <GoldHints :hints="exercise.hints" :entry="entry" :limit="solutionLocked ? 2 : 3" />
+    <details v-if="!solutionLocked" class="comparison exercise-solution" @toggle="modelToggle">
       <summary>Comprendre une correction possible</summary>
       <pre>{{ exercise.solution }}</pre>
       <template v-if="exercise.solutionFiles">
@@ -142,6 +154,10 @@ function modelToggle(event) {
         accompagnée.
       </p>
     </details>
-    <SourceCredit :source="exercise.source" />
+    <p v-if="officialReference" class="small muted">
+      Adaptation pédagogique du sujet officiel {{ officialReference }}. Référence et périmètre en
+      tête du tutoriel.
+    </p>
+    <SourceCredit v-else :source="exercise.source" />
   </article>
 </template>

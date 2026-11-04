@@ -8,6 +8,7 @@ import {
   test as t,
   source
 } from './authoring.js';
+import { basesFoundation } from './bases-foundation.js';
 const bases = (changes) =>
   source(
     '2.4 Représentation d’un entier positif dans différentes bases',
@@ -21,50 +22,8 @@ export default {
     lesson({
       id: 'premiere-bases',
       title: 'Bases, octets et hexadécimal',
-      duration: 40,
-      prerequisites: ['Divisions euclidiennes et puissances.'],
-      objectives: [
-        'Convertir entre bases 2, 10 et 16.',
-        'Relier longueur binaire et plage de valeurs.'
-      ],
+      ...basesFoundation,
       official: ['P-B1', 'P-B2'],
-      sections: [
-        s(
-          'Des positions qui ont un poids',
-          'Dans une base b, le chiffre placé au rang k pèse b puissance k, en commençant au rang zéro à droite. Ainsi 10110 en base 2 vaut 16 + 4 + 2 = 22. Les divisions successives par b donnent les chiffres en partant de la droite.'
-        ),
-        s(
-          'Quatre bits par chiffre hexadécimal',
-          'En base 16, A à F représentent 10 à 15. Un groupe de quatre bits vaut de 0 à 15 : 1010 0111 devient A7. Deux chiffres hexadécimaux suffisent donc pour un octet.',
-          'n = int("A7", 16)\nprint(n, bin(n), hex(n))'
-        ),
-        s(
-          'Prévoir la place',
-          'n bits non signés codent de 0 à 2**n − 1. Additionner deux nombres sur n bits peut demander n+1 bits ; leur produit peut demander 2*n bits. Ce sont des majorants, pas toujours le nombre minimal : 1+1 demande deux bits, 0+0 un seul dans l’écriture usuelle.'
-        )
-      ],
-      examples: [
-        e('Décomposer', '11001₂', 'Les rangs à 1 pèsent 16, 8 et 1.', '25₁₀'),
-        e(
-          'Regrouper',
-          '3C₁₆',
-          '3 donne 0011 et C donne 1100 ; les groupes sont concaténés.',
-          '00111100₂ = 60₁₀'
-        ),
-        e(
-          'Dépasser une case',
-          '255 + 1 sur un octet',
-          'La somme vaut 256 = 2**8 : neuf bits sont nécessaires. Un format de huit bits ne suffit pas.',
-          'Débordement ; 100000000₂ demande 9 bits.'
-        )
-      ],
-      activity: a(
-        'bits',
-        'Change les bits pour représenter 173, puis la plus grande valeur.',
-        'Les huit bits à 1 donnent 255.',
-        'Le modèle montre un entier non signé de taille fixe ; les entiers Python peuvent grandir.',
-        { value: 173, bits: 8, signed: false }
-      ),
       exercises: [
         q(
           'p-b1',
@@ -114,12 +73,6 @@ export default {
           'Après chaque division, le quotient a un chiffre de moins ; la boucle finit car le quotient diminue.',
           'Teste 0 et 1 : une boucle qui commence uniquement sur n>0 peut retourner zéro bit.'
         )
-      ],
-      reflection: 'Pourquoi un produit peut-il demander deux fois plus de bits que ses facteurs ?',
-      review: [
-        'Je convertis en utilisant les poids.',
-        'Je regroupe quatre bits en hexadécimal.',
-        'Je distingue nombre de valeurs et valeur maximale.'
       ]
     }),
     lesson({

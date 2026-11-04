@@ -3,7 +3,7 @@ import path from 'node:path';
 import os from 'node:os';
 
 for (const level of ['snt', 'premiere', 'terminale']) {
-  test(`toutes les manipulations ${level} se montent sans erreur`, async ({ page }) => {
+  test(`tous les cours et manipulations ${level} se montent sans erreur`, async ({ page }) => {
     test.setTimeout(120000);
     const errors = [];
     page.on('pageerror', (e) => errors.push(e.message));
@@ -36,7 +36,7 @@ for (const level of ['snt', 'premiere', 'terminale']) {
               observed: true,
               explanation: 'Je peux expliquer la comparaison.'
             },
-            step: 1
+            step: 0
           };
         }
       }
@@ -48,6 +48,10 @@ for (const level of ['snt', 'premiere', 'terminale']) {
         `${index === 0 ? '/?catalogue=1' : '/'}#/niveau/${level}/chapitre/${lesson.chapter}/lecon/${lesson.id}`
       );
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(lesson.title);
+      await expect(page.locator('.lesson-opening')).toBeVisible();
+      expect(await page.locator('.prerequisite-card').count()).toBeGreaterThanOrEqual(3);
+      await expect(page.locator('.life-example')).toHaveCount(2);
+      expect(await page.locator('.reading-check').count()).toBeGreaterThanOrEqual(2);
       // Une navigation qui change la query recharge la page ; les suivantes utilisent le hash.
       const manipulate = page.getByRole('button', { name: '2 Manipuler', exact: true });
       await manipulate.click();

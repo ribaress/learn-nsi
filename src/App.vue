@@ -11,6 +11,7 @@ const { storage } = useProgress();
 const nav = [
   { to: '/', label: 'Mon parcours', icon: 'home' },
   { to: '/programme', label: 'Les programmes', icon: 'book' },
+  { to: '/annales', label: 'Annales guidées', icon: 'code' },
   { to: '/competences', label: 'Mes compétences', icon: 'skills' },
   { to: '/sauvegarde', label: 'Ma sauvegarde', icon: 'save' },
   { to: '/sources', label: 'Les sources', icon: 'book' }
@@ -39,7 +40,7 @@ const nav = [
                 ? route.path === '/' ||
                   route.path.startsWith('/mission') ||
                   route.path.startsWith('/niveau')
-                : route.path === item.to
+                : route.path === item.to || route.path.startsWith(`${item.to}/`)
           }"
           ><AppIcon :name="item.icon" :size="21" /><span>{{ item.label }}</span></RouterLink
         >

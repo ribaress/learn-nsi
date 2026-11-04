@@ -256,7 +256,10 @@ function shell() {
 <template>
   <div class="data-lab">
     <template v-if="type === 'bits'">
-      <p>Clique sur un bit pour changer sa valeur. Le bit de gauche a le poids le plus fort.</p>
+      <p>
+        Clique sur une case pour passer de 0 à 1, ou de 1 à 0. Le petit nombre indique la valeur de
+        cette case. On additionne les valeurs des cases à 1.
+      </p>
       <div class="bit-row">
         <button
           v-for="(bit, index) in binary"
@@ -270,7 +273,19 @@ function shell() {
         </button>
       </div>
       <p class="lab-observation" aria-live="polite">
-        Non signé : {{ bitValue }}. Complément à deux sur {{ bits }} bits : {{ signedValue }}.
+        {{ config.signed ? 'Lecture non signée' : 'Valeur représentée' }} : {{ bitValue }}.<template
+          v-if="config.signed"
+        >
+          Complément à deux sur {{ bits }} bits : {{ signedValue }}.</template
+        ><template v-if="config.showHex">
+          En hexadécimal :
+          {{
+            bitValue
+              .toString(16)
+              .toUpperCase()
+              .padStart(Math.ceil(bits / 4), '0')
+          }}.</template
+        >
       </p>
       <p class="small">
         {{

@@ -1,4 +1,5 @@
 import { capabilities } from './coverage.js';
+import { expandPedagogy } from './pedagogy.js';
 
 // Aides d’écriture : elles assemblent les champs, sans fabriquer les explications.
 export const answer = (prompt, value, hints, explanation, feedbackWrong) => ({
@@ -40,7 +41,7 @@ export const web = (prompt, starter, solution, checks, hints, explanation, feedb
   explanation,
   feedbackWrong
 });
-export const lesson = (data) => ({
+export const lesson = (data, pedagogyEntry) => ({
   ...data,
   official: data.official.map((id) => {
     const cap = capabilities.find((c) => c.id === `snt-${id}`);
@@ -66,7 +67,8 @@ export const lesson = (data) => ({
       'Application : faire soi-même',
       'Transfert : changer de situation'
     ][i]
-  }))
+  })),
+  ...expandPedagogy(data, pedagogyEntry)
 });
 export const tableActivity = (prompt, prediction, explanation, columns, rows) => ({
   type: 'table',

@@ -42,6 +42,13 @@ import { sources } from '../content/missions.js';
     <section class="sources-section">
       <h2>Trois parcours, des ressources traçables</h2>
       <p>
+        Les <RouterLink to="/annales" class="text-link">annales guidées</RouterLink> proposent une
+        sélection de sujets écrits et pratiques de 2021 à 2026. Chaque tutoriel cite le document
+        public du ministère, sa référence et les questions travaillées. Les résolutions sont des
+        propositions pédagogiques d’Atelier NSI ; celles de 2025 et 2026 s’affichent après les trois
+        ateliers réussis.
+      </p>
+      <p>
         Les sections SNT, première NSI et terminale NSI relient chaque capacité officielle à des
         leçons et activités.
         <RouterLink to="/programme" class="text-link"

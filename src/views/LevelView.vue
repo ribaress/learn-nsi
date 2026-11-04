@@ -9,6 +9,7 @@ import {
 } from '../content/courses/catalog.js';
 import { projectsFor } from '../content/courses/projects.js';
 import { useCourses } from '../composables/useCourses.js';
+import AppIcon from '../components/AppIcon.vue';
 const route = useRoute(),
   chapters = ref([]),
   error = ref(''),
@@ -67,6 +68,17 @@ watch(
           >Reprendre ma leçon</RouterLink
         >
       </div>
+      <section v-if="levelId === 'terminale'" class="panel annales-invitation">
+        <div>
+          <span class="eyebrow">Préparer le bac</span>
+          <h2>Les annales guidées</h2>
+          <p>
+            Une sélection de sujets officiels écrits et pratiques de 2021 à 2026, expliqués par
+            étapes.
+          </p>
+        </div>
+        <RouterLink to="/annales" class="button primary">Choisir un sujet</RouterLink>
+      </section>
       <p v-if="loading" role="status">Chargement des chapitres…</p>
       <section v-for="(chapter, index) in chapters" :key="chapter.id" class="course-chapter panel">
         <div class="section-heading">
@@ -85,9 +97,9 @@ watch(
             :key="lesson.id"
             :to="lessonUrl(levelId, chapter.id, lesson.id)"
             class="course-lesson-link"
-            ><span :class="['lesson-dot', { done: complete(lesson) }]">{{
-              complete(lesson) ? '✓' : '→'
-            }}</span>
+            ><span :class="['lesson-dot', { done: complete(lesson) }]"
+              ><AppIcon :name="complete(lesson) ? 'check' : 'right'" :size="17"
+            /></span>
             <div>
               <strong>{{ lesson.title }}</strong
               ><span>{{ lesson.objectives[0] }}</span>
@@ -105,7 +117,7 @@ watch(
           :key="project.id"
           :to="`/niveau/${levelId}/projet/${project.id}`"
           class="course-lesson-link"
-          ><span class="lesson-dot">✦</span>
+          ><span class="lesson-dot"><AppIcon name="sparkle" :size="17" /></span>
           <div>
             <strong>{{ project.title }}</strong
             ><span>{{ project.objectives[0] }}</span>

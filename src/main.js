@@ -9,10 +9,21 @@ import App from './App.vue';
 import HomeView from './views/HomeView.vue';
 import './style.css';
 import './courses.css';
+import './annales.css';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     { path: '/', component: HomeView, meta: { title: 'Mon parcours' } },
+    {
+      path: '/annales',
+      component: () => import('./views/AnnalesView.vue'),
+      meta: { title: 'Les annales guidées' }
+    },
+    {
+      path: '/annales/:id',
+      component: () => import('./views/AnnaleTutorialView.vue'),
+      meta: { title: 'Résoudre un sujet officiel' }
+    },
     {
       path: '/niveau/:niveau',
       component: () => import('./views/LevelView.vue'),

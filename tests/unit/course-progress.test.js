@@ -2,6 +2,21 @@ import { describe, it, expect } from 'vitest';
 import * as progress from '../../src/domain/progress.js';
 
 describe('Sauvegardes des trois parcours', () => {
+  it('conserve les pauses de compréhension et refuse des réponses illisibles après import', () => {
+    const p = progress.freshProgress();
+    p.courses.premiere = {
+      lessons: {
+        'premiere-bases': {
+          ...progress.freshCourseLesson(),
+          readingChecks: { 1: { answer: 'ecriture', submitted: true } },
+          readingActivities: { 4: { value: 13 } }
+        }
+      }
+    };
+    expect(progress.parseExport(JSON.stringify(progress.createExport(p))).progress).toEqual(p);
+    p.courses.premiere.lessons['premiere-bases'].readingChecks[1].answer = [];
+    expect(() => progress.parseExport(JSON.stringify(progress.createExport(p)))).toThrow();
+  });
   it('exporte au format 2 et conserve la progression des cours', () => {
     const p = progress.freshProgress();
     expect(p.courses).toEqual({});

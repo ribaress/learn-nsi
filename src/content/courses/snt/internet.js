@@ -1,10 +1,12 @@
 import {
-  lesson,
+  lesson as assembleLesson,
   answer as a,
   python as p,
   networkActivity as net,
   tableActivity as table
 } from './authoring.js';
+import pedagogy from './pedagogy-internet.js';
+const lesson = (data) => assembleLesson(data, pedagogy[data.id]);
 export default {
   id: 'internet',
   title: 'Internet',

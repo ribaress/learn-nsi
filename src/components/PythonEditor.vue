@@ -14,6 +14,7 @@ const props = defineProps({
   expected: Array,
   verifyQuery: String,
   ordered: Boolean,
+  revealExpected: { type: Boolean, default: true },
   contract: {
     type: String,
     default:
@@ -200,7 +201,7 @@ onBeforeUnmount(() => runner.dispose());
           <thead>
             <tr>
               <th>Appel</th>
-              <th>Attendu</th>
+              <th v-if="revealExpected">Attendu</th>
               <th>Obtenu</th>
             </tr>
           </thead>
@@ -221,7 +222,7 @@ onBeforeUnmount(() => runner.dispose());
                   <pre>{{ t.error }}</pre>
                 </details>
               </td>
-              <td>
+              <td v-if="revealExpected">
                 <code>{{ t.expectedError || JSON.stringify(t.expected) }}</code>
               </td>
               <td>

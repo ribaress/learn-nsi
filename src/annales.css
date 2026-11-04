@@ -1,0 +1,266 @@
+.annales-intro,
+.annales-invitation,
+.annale-progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+.annales-intro p,
+.annale-progress p {
+  margin: 8px 0 0;
+}
+.annales-rule {
+  border-left: 3px solid #b7aee4;
+  padding-left: 22px;
+}
+.annales-invitation {
+  align-items: center;
+  grid-template-columns: 1fr auto;
+}
+.annales-invitation h2 {
+  margin-bottom: 8px;
+}
+.annales-invitation p {
+  margin: 0;
+}
+.annales-filters {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+.annales-filters.with-group {
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1.5fr;
+}
+.annales-filters label {
+  display: grid;
+  gap: 8px;
+  font-weight: 650;
+  font-size: 13px;
+  min-width: 0;
+}
+.annales-filters select,
+.annales-filters input {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #d2cde4;
+  border-radius: 9px;
+  color: var(--ink);
+  background: white;
+}
+.annales-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.annale-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+.annale-card h2 {
+  font-size: 21px;
+}
+.annale-card h2 a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+.annale-card p {
+  margin: 0;
+}
+.annale-card .button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.annale-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5b4e86;
+}
+.annale-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.annale-tags span {
+  font-size: 11px;
+  color: #5c5278;
+  padding: 4px 9px;
+  background: #f1eef9;
+  border-radius: 6px;
+}
+.annale-access {
+  color: #5c5278;
+}
+.annales-credit {
+  margin-top: 26px;
+}
+.annale-tutorial-page > .panel {
+  margin-bottom: 24px;
+}
+.annale-source p {
+  margin: 10px 0;
+}
+.annale-source details {
+  margin-top: 16px;
+}
+.annale-tutorial-page summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+.annale-preparation h3 {
+  margin: 22px 0 12px;
+}
+.annale-preparation li {
+  margin: 9px 0;
+}
+.annale-preparation pre,
+.annale-question-context {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f5f4fa;
+}
+.annale-progress {
+  background: #f2f8f6;
+  border-color: #d1e5db;
+}
+.annale-step-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+.annale-step-nav a {
+  font-size: 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 7px;
+}
+.annale-step-nav a:hover {
+  background: var(--lavender);
+}
+.annale-guidance {
+  color: #554b70;
+  font-size: 14px;
+  padding: 14px 17px;
+  background: #f5f3fb;
+  border-left: 3px solid #b7aee4;
+  border-radius: 4px;
+}
+.annale-workshop .course-exercise {
+  margin-bottom: 0;
+  scroll-margin-top: 24px;
+}
+.annale-resolution {
+  margin-top: 24px;
+}
+.annale-resolution ol {
+  padding-left: 24px;
+}
+.annale-resolution li {
+  margin: 15px 0;
+  padding-left: 8px;
+}
+.annale-pitfall {
+  padding: 16px;
+  background: #fff5ee;
+  border-radius: 8px;
+}
+.annale-takeaway h2,
+.annale-review h2 {
+  margin-bottom: 16px;
+}
+.annale-review textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  resize: vertical;
+  border: 1px solid #d2cde4;
+  border-radius: 10px;
+  padding: 13px;
+}
+.annale-section-nav h2,
+.annale-section-heading h2 {
+  margin-bottom: 14px;
+}
+.annale-section-heading {
+  margin-bottom: 24px;
+}
+.annale-section-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.annale-section-button {
+  text-align: left;
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.annale-section-button[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--lavender);
+}
+.annale-section-button span {
+  display: block;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.annale-writing textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 13px;
+  border: 1px solid #d2cde4;
+  border-radius: 10px;
+  resize: vertical;
+}
+.annale-review .review-check {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 14px 0;
+}
+@media (max-width: 760px) {
+  .annales-page .panel,
+  .annale-tutorial-page .panel,
+  .annales-invitation {
+    padding: 20px;
+  }
+  .annales-intro,
+  .annales-invitation,
+  .annale-progress,
+  .annales-grid,
+  .annales-filters,
+  .annales-filters.with-group {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .annales-rule {
+    border-left: 0;
+    border-top: 1px solid #d9d3eb;
+    padding: 16px 0 0;
+  }
+  .annale-meta {
+    flex-wrap: wrap;
+  }
+}
+.annales-page .panel,
+.annale-tutorial-page .panel,
+.annales-invitation {
+  padding: 26px;
+}

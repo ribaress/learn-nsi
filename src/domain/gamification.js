@@ -37,7 +37,7 @@ export function gameSummary(progress) {
         count(exercise.success);
         if (exercise.success) activeLevels.add(level);
       }
-      if (courseLessonComplete(lesson, Object.keys(lesson.exercises || {}))) {
+      if (courseLessonComplete(lesson, lesson.requiredExerciseIds || Object.keys(lesson.exercises || {}))) {
         finished++;
         const project = id.startsWith('projet-');
         if (project) projects++;

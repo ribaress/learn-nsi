@@ -5,6 +5,15 @@ autonome, exercices dans le site, indices dorés, sauvegardes compatibles.
 
 ## Suivi
 
+- Révision pédagogique demandée : départ de zéro dans chaque cours, introductions concrètes,
+  rappels autonomes, deux exemples quotidiens avec limites, méthodes détaillées, tableaux et
+  pauses de compréhension. La leçon sur les bases est reprise depuis les unités décimales.
+- Révision livrée dans les **82 cours**, avec **164 exemples quotidiens** et des rappels de
+  syntaxe Python sur place. Vérification : **150 tests unitaires**, **34 scénarios Chrome**,
+  137 corrections Python/SQL. Relecture indépendante des fondations et de sujets avancés,
+  et correction du cas des agrégats SQL sur une sélection vide.
+- Lecture : nouvelles réponses et manipulations enregistrées sans modifier les points ou
+  la validation des exercices. Étoile XP et flèches de chapitres centrées avec des SVG.
 - Structure des contenus : contrat commun dans `course-authoring.md`.
 - Contenus livrés : SNT 25 leçons / 54 capacités ; première 30 / 52 ; terminale 27 / 48.
 - Cinq projets, 261 exercices, dont 137 corrections Python/SQL exécutables et 25 adaptations attribuées.

@@ -1,6 +1,39 @@
 # Contrat des parcours
 
 Les contenus sont des modules JavaScript, sans HTML injecté dans les explications.
+
+## Partir de zéro — exigence pédagogique
+
+Un élève ne doit pas connaître le vocabulaire informatique avant d’ouvrir une leçon.
+Chaque leçon commence par `introduction: {situation,question,why,journey}` : une
+situation familière concrète, la question qui en découle, l’utilité de la notion et
+trois à cinq étapes du chemin de compréhension. `journey` est un tableau de textes.
+Ce sont des textes particuliers à la notion, pas des promesses génériques.
+
+`prerequisiteRecap: [{term,explanation,example}]` réexplique sur place au moins trois
+notions nécessaires, y compris un calcul ou du vocabulaire mathématique lorsque
+c’est nécessaire. Les anciens liens et prérequis deviennent des conseils de révision,
+pas des connaissances supposées acquises.
+
+Chaque leçon présente aussi `realLifeExamples` : deux exemples réellement concrets
+`[{title,situation,connection,difference}]`. `connection` explique explicitement le
+lien avec la notion informatique ; `difference` indique une limite de l’analogie.
+Ne pas ajouter un objet familier en gardant une explication abstraite inchangée.
+
+Les sections partent du cas concret, définissent les mots AVANT les formules et
+déroulent les opérations sans sauter les étapes. Une lettre, une puissance, un indice,
+un opérateur Python ou une convention doit être expliqué au premier usage. Chaque
+leçon possède au moins cinq sections substantielles, organisées pour un débutant.
+Les trois exemples scolaires sont conservés et explicitent maintenant leur méthode.
+Deux sections au moins proposent `checkpoint: {question,choices,answer,explanation}`
+avec `choices:[{label,value}]`, une réponse unique et des valeurs chaînes. Ces pauses
+de compréhension donnent un retour explicatif ; elles ne sont pas des certifications.
+Une section peut ajouter `table:{caption,columns,rows}` (valeurs simples) lorsque
+des colonnes aident à suivre un calcul. Les pauses ne rapportent pas d’XP supplémentaires.
+
+Cette exigence s’applique aux 82 leçons. Conserver tous les identifiants, les capacités
+officielles, les provenances GitHub et les trois exercices par leçon pour préserver
+les sauvegardes et la traçabilité. Les projets et l’atelier introductif sont séparés.
 `duration` est un nombre de minutes. Après une modification des titres, objectifs,
 durées ou exercices, lancer `npm run content:index` pour actualiser les sommaires.
 Chaque niveau possède `src/content/courses/<niveau>/index.js`, qui exporte `chapters` :

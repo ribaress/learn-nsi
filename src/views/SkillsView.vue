@@ -53,7 +53,7 @@ const skills = [
     <section class="level-cards" aria-label="Progression par niveau">
       <article v-for="level in levels" :key="level.id" class="level-card" :class="level.color">
         <h2>{{ level.title }}</h2>
-        <p>{{ finishedLessons(level.id) }} leçon(s) ou projet(s) terminé(s).</p>
+        <p>{{ finishedLessons(level.id) }} activité(s) terminée(s) : leçons, projets ou annales.</p>
         <RouterLink :to="`/niveau/${level.id}`" class="button secondary"
           >Retrouver ce parcours</RouterLink
         >

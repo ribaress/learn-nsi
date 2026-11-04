@@ -271,7 +271,10 @@ export function freshCourseLesson() {
 export function courseLessonComplete(entry, exerciseIds) {
   return Boolean(
     entry &&
-    exerciseIds.length === 3 &&
+    (exerciseIds.length === 3 ||
+      (entry.requiredExerciseIds?.length > 0 &&
+        exerciseIds.length === entry.requiredExerciseIds.length &&
+        exerciseIds.every(id => entry.requiredExerciseIds.includes(id)))) &&
     exerciseIds.every((id) =>
       ['autonome', 'accompagne'].includes(entry.exercises?.[id]?.success)
     ) &&
@@ -311,6 +314,30 @@ function validCourses(courses) {
         return false;
       if (lesson.discoveryAnswer !== undefined && typeof lesson.discoveryAnswer !== 'string')
         return false;
+      if (lesson.requiredExerciseIds !== undefined &&
+        (!Array.isArray(lesson.requiredExerciseIds) || !lesson.requiredExerciseIds.length ||
+          new Set(lesson.requiredExerciseIds).size !== lesson.requiredExerciseIds.length ||
+          !lesson.requiredExerciseIds.every(slug))) return false;
+      if (
+        lesson.readingChecks !== undefined &&
+        (!plain(lesson.readingChecks) ||
+          !Object.entries(lesson.readingChecks).every(
+            ([key, value]) =>
+              /^\d+$/.test(key) &&
+              plain(value) &&
+              typeof value.answer === 'string' &&
+              typeof value.submitted === 'boolean'
+          ))
+      )
+        return false;
+      if (
+        lesson.readingActivities !== undefined &&
+        (!plain(lesson.readingActivities) ||
+          !Object.entries(lesson.readingActivities).every(
+            ([key, value]) => /^\d+$/.test(key) && validCourseActivity(value)
+          ))
+      )
+        return false;
       for (const [exerciseId, exercise] of Object.entries(lesson.exercises)) {
         if (!slug(exerciseId) || !plain(exercise)) return false;
         if (
@@ -334,7 +361,7 @@ function validCourses(courses) {
             exercise.attempts > 10000)
         )
           return false;
-        for (const field of ['answer', 'code'])
+        for (const field of ['answer', 'code', 'draft'])
           if (exercise[field] !== undefined && typeof exercise[field] !== 'string') return false;
         if (
           exercise.files !== undefined &&

@@ -62,6 +62,242 @@
   padding: 1px 4px;
   overflow-wrap: anywhere;
 }
+.game-star,
+.lesson-dot {
+  line-height: 1;
+}
+.game-star > svg,
+.lesson-dot > svg {
+  display: block;
+  flex-shrink: 0;
+  margin: 0;
+}
+.lesson-opening {
+  margin: 0 0 30px;
+  padding: 27px;
+  border: 1px solid #cce2d7;
+  border-radius: 14px;
+  background: #f3faf6;
+}
+.lesson-opening h2 {
+  font-size: 25px;
+  line-height: 1.45;
+}
+.lesson-opening .opening-story {
+  font-size: 16px;
+  line-height: 1.95;
+}
+.opening-purpose {
+  border-left: 3px solid #79b398;
+  padding: 8px 0 8px 18px;
+  margin: 24px 0;
+}
+.opening-purpose p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.lesson-opening h3 {
+  margin-top: 25px;
+}
+.lesson-opening ol {
+  padding-left: 23px;
+  margin-bottom: 0;
+}
+.lesson-opening li {
+  font-size: 14px;
+  padding: 6px 0;
+  line-height: 1.8;
+}
+.lesson-prerequisites {
+  margin: 30px 0 38px;
+}
+.prerequisite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+.prerequisite-card {
+  border: 1px solid #ddd6ec;
+  border-radius: 12px;
+  padding: 21px;
+  background: #fcfbff;
+}
+.prerequisite-card h3 {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+.prerequisite-card > p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.recap-example {
+  padding: 13px;
+  background: #f2eefb;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.recap-example p {
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 7px 0 0;
+}
+.reading-table {
+  margin: 24px 0;
+  border: 1px solid #ded7ed;
+  border-radius: 10px;
+}
+.reading-table table {
+  margin: 0;
+}
+.reading-table caption {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: #504468;
+  padding: 15px;
+  background: #f5f2fb;
+}
+.reading-table th,
+.reading-table td {
+  font-size: 13px;
+  padding: 12px 15px;
+  line-height: 1.6;
+}
+.reading-check {
+  background: #f6f3fc;
+  border: 1px solid #dcd2ee;
+  border-radius: 12px;
+  padding: 23px;
+  margin: 25px 0;
+}
+.reading-check fieldset {
+  border: 0;
+  margin: 0 0 18px;
+  padding: 0;
+  min-width: 0;
+}
+.reading-check legend {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0;
+  line-height: 1.8;
+}
+.reading-check label {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 12px;
+  padding: 11px 13px;
+  background: white;
+  border: 1px solid #e2dbed;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.8;
+  cursor: pointer;
+}
+.reading-check input {
+  margin-top: 6px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+.reading-check-feedback {
+  border-left: 3px solid #a18bc2;
+  padding: 14px 17px;
+  background: #efebf8;
+  border-radius: 6px;
+  margin: 18px 0;
+}
+.reading-check-feedback.correct {
+  background: #e5f5ed;
+  border-color: #75a98d;
+}
+.reading-check-feedback p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 7px 0 0;
+}
+.reading-check > .small {
+  margin: 14px 0 0;
+  font-size: 11px;
+}
+.inline-reading-lab {
+  padding: 22px;
+  background: #fbfafc;
+  border: 1px dashed #cfc3e1;
+  border-radius: 12px;
+  margin: 24px 0;
+}
+.paired-examples {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 25px;
+  margin: 28px 0;
+}
+.paired-examples h2 {
+  font-size: 21px;
+}
+.life-example {
+  border: 1px solid #d4e6dd;
+  border-radius: 12px;
+  padding: 22px;
+  background: #f6fbf8;
+  margin-top: 20px;
+}
+.life-example h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.life-example p {
+  font-size: 14px;
+  line-height: 1.95;
+}
+.life-connection {
+  border-left: 3px solid #7bb49a;
+  padding: 8px 0 8px 15px;
+  margin: 18px 0;
+}
+.life-connection p {
+  margin: 8px 0 0;
+}
+.analogy-limit {
+  font-size: 12px !important;
+  color: #5a5f61;
+  border-top: 1px solid #d8e5de;
+  padding-top: 15px;
+}
+@media (max-width: 900px) {
+  .paired-examples {
+    grid-template-columns: 1fr;
+  }
+  .prerequisite-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .lesson-opening {
+    padding: 20px;
+  }
+  .lesson-opening h2 {
+    font-size: 21px;
+  }
+  .lesson-opening .opening-story {
+    font-size: 15px;
+  }
+  .prerequisite-card,
+  .reading-check,
+  .inline-reading-lab {
+    padding: 17px;
+  }
+  .reading-check label {
+    font-size: 13px;
+  }
+  .life-example {
+    padding: 18px;
+  }
+}
 .glossary-trigger {
   display: inline;
   border: 0;

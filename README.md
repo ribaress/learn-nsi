@@ -16,6 +16,60 @@ L’accueil donne accès aux niveaux ; **Les programmes** affiche la corresponda
 
 Les cinq projets sont un reportage numérique responsable en SNT, un tableau de bord CSV et un quiz Web en première, un labyrinthe et une médiathèque SQL en terminale. Leurs étapes, données, exemples, outils, tests et corrigés restent dans le site.
 
+## Les annales guidées
+
+La rubrique **Annales guidées**, dans la navigation et depuis la terminale, propose **22 tutoriels et 66 ateliers supplémentaires**, sur une sélection de sujets officiels de **2021 à 2026**. Elle est accessible à **http://localhost:4173/#/annales** en développement, ou **http://localhost:4174/#/annales** dans l’aperçu du build. Des filtres permettent de choisir le centre, le groupe des Centres étrangers, l’année, le format écrit/pratique et le thème ou la référence. La recherche reconnaît aussi le nom de la session et la zone, avec ou sans accents.
+
+### Centres étrangers
+
+La sélection **Centres étrangers** comporte **12 tutoriels, un par groupe et par année de 2021 à 2026**, soit **36 ateliers**. Accès direct : **http://localhost:4173/#/annales?centre=centres-etrangers** en développement ou **http://localhost:4174/#/annales?centre=centres-etrangers** pour le build. Les deux groupes sont affichés par défaut. Les filtres Centre et Groupe sont conservés dans l’adresse et se combinent avec l’année et la recherche. Ajouter `&groupe=1` ou `&groupe=2` au lien sélectionne un groupe directement. Changer de centre efface le filtre de groupe. Les tutoriels Métropole restent disponibles. La banque pratique est nationale : elle est distincte des centres d’examen de l’écrit et possède sa propre option dans le filtre.
+
+**Groupe 1** :
+
+| Année | Référence      | Extrait guidé                                                                                 |
+| ----- | -------------- | --------------------------------------------------------------------------------------------- |
+| 2021  | `21-NSIJ1G11`  | Arbres binaires de recherche : insertion, bornes et parcours infixe.                          |
+| 2022  | `22-NSIJ1G11`  | Jours, mois, modulo et calcul du lendemain, sans années bissextiles.                          |
+| 2023  | `23-NSIJ1G11`  | Catalogue de podcasts : sélection SQL, suppression d’un doublon et correction d’un animateur. |
+| 2024  | `24-NSIG11BIS` | **Sujet bis** : solitaire bulgare, état suivant, stabilité et cycles.                         |
+| 2025  | `25-NSIJ1G11`  | Radiosondes : horodatages, limites d’altitude et numéros de série uniques.                    |
+| 2026  | `26-NSIJ1G11`  | Athlètes : conversion des performances en points et tri par score décroissant.                |
+
+**Groupe 2** :
+
+| Année | Référence     | Zone retenue     | Extrait guidé                                                                   |
+| ----- | ------------- | ---------------- | ------------------------------------------------------------------------------- |
+| 2021  | `21-NSIJ1AN1` | Amérique du Nord | Panier, offre de bienvenue et soldes.                                           |
+| 2022  | `22-NSIJ1AN1` | Amérique du Nord | Palindrome itératif, complémentaire ADN et composition.                         |
+| 2023  | `23-NSIJ1LI1` | Liban            | Pension d’animaux : sélection, jointure et insertion SQL.                       |
+| 2024  | `24-NSIJ1JA1` | Asie / Japon     | Maisons et antennes : objets, couverture et stratégie gloutonne.                |
+| 2025  | `25-NSIJ1JA1` | Asie / Japon     | Traces de boucles, terminaison et limites d’une heuristique textuelle.          |
+| 2026  | `26-NSIJ1JA1` | Asie / Japon     | Matériel de danse : dictionnaires imbriqués, volumes et stock après chargement. |
+
+Le groupe 2 comprend plusieurs zones et ne correspond pas au jour 2 d’une épreuve. Le rattachement dépend de la session : le Liban appartient au groupe 2 dans le [tableau officiel de 2023](https://cache.media.education.gouv.fr/file/45/75/0/ensel620_annexe1_1428750.pdf), tandis qu’il figure dans le groupe 1 en 2026. Le Japon reste dans le groupe 2 du [tableau officiel de 2026](https://www.education.gouv.fr/media/230070/download). La fiche indique donc toujours la zone et le code réel du sujet, sans inventer de référence « G2 » commune.
+
+Les fiches indiquent les pages, questions et adaptations effectivement traitées ; la sélection ne couvre pas chaque sujet entier, les deux jours ou toutes les zones de chaque groupe. Le verrou pédagogique de 2025–2026 s’applique aux deux groupes. Les tests d’un exercice récent n’utilisent pas comme données les réponses à trouver dans un autre atelier de la même fiche.
+
+Les autres écrits, de Métropole, abordent la dichotomie (2021), le parenthésage et les piles (2022), SQL et les meubles (2023), les objets et graphes de sites Web (2024), les jointures et agrégations sur les guitares (2025) et le sous-réseau du lycée (2026). Les pratiques portent sur le tri et les votes (sujet 01 de 2023), les arbres et le tri par sélection (sujet 01 de 2024), les voisins entrants et les groupes de chiffres (sujet 01 de 2025) et le codage RLE (sujet 1 de 2026).
+
+Chaque fiche précise le code du sujet, la session, les questions et pages retenues, les adaptations et le lien direct vers le document du ministère. Les énoncés sont reformulés ; les résolutions sont des propositions pédagogiques d’Atelier NSI, pas des corrigés officiels. La sélection d’extraits ne couvre pas l’intégralité de chaque sujet ni toutes les annales disponibles. Les sujets ne sont pas attribués à la licence des ressources libres de Gilles Lassus.
+
+Le tutoriel présente les données et rappels, puis trois ateliers avec conseils, indices, réponses ou code à tester, résolution expliquée et erreur fréquente. **Pour 2021 à 2024**, les corrections sont consultables pendant le travail et leur consultation marque l’aide apportée. **Pour 2025 et 2026**, toutes les corrections de la fiche restent masquées jusqu’à la réussite des trois ateliers dans l’application : deux pistes restent proposées, mais ni troisième indice résolu, ni modèle, ni explication donnant la réponse. Les tableaux de tests montrent les résultats du programme de l’élève et les réussites/échecs, en masquant la colonne des résultats attendus jusqu’au déblocage. Une tentative, une autoévaluation ou la lecture du sujet ne débloque rien. Les réussites sont reconnues par les vérifications de réponses et les tests Python/SQL existants.
+
+Les réponses, programmes, indices, réussites et notes sont sauvegardés avec la terminale, sous des identifiants `annale-…`, et inclus dans l’export/import JSON habituel. Le déblocage acquis reste disponible après rechargement ou import d’une sauvegarde. Après trois réussites, l’élève peut cocher trois critères de relecture ; les règles habituelles de XP s’appliquent. Ces tutoriels restent distincts du décompte des 82 leçons du programme.
+
+Les réponses courtes vérifient des résultats ciblés ; la rédaction libre n’est pas notée. Les tests de sortie ne prouvent pas que le code utilise effectivement une méthode imposée : une relecture du raisonnement reste nécessaire. Le verrou est **pédagogique et local** : une modification volontaire des sources ou de la sauvegarde peut le contourner. Les corrigés ne constituent pas un secret protégé par un serveur. Les liens officiels nécessitent Internet et peuvent évoluer. Le RLE s’exerce sur des listes de pixels : la manipulation des fichiers PNG avec Pillow n’est pas incluse.
+
+Pour vérifier cette rubrique :
+
+```sh
+npm test -- tests/unit/annales.test.js
+npm run test:e2e -- annales.spec.js
+npm run test:solutions
+```
+
+La dernière commande vérifie aussi toutes les solutions Python et SQL des annales avec le vrai Pyodide, en complément des cours et projets. La publication reste celle du site complet : compiler, puis transférer `dist/` et ses fichiers Python vers l’hébergement statique.
+
 ## Ouvrir le site
 
 Sur cet ordinateur Windows, double-cliquer sur **lancer.cmd**. Il utilise la version récente de Node fournie par Codex lorsqu’elle est disponible, sans changer l’installation système. Puis ouvrir **http://localhost:4173/**. Si un serveur est déjà ouvert sur ce port, utiliser cette adresse directement. Garder son terminal ouvert pendant l’utilisation ; Ctrl+C l’arrête.
@@ -98,11 +152,15 @@ Pour publier, transférer tout le contenu de **dist/**, y compris **python/**, v
 
 ## Fonctionnement pédagogique
 
+- Les cours partent de zéro : une situation familière pose la question avant le vocabulaire ou les formules. L’introduction explique l’utilité de la notion et annonce le chemin de compréhension. Les notions préalables sont réexpliquées sur place, avec de petits exemples, sans imposer de consulter un autre cours.
+- Les raisonnements sont déroulés étape par étape. Des tableaux rendent visibles les calculs ou les états successifs ; des pauses de compréhension proposent une réponse et un retour expliqué, que l’élève peut revoir. Deux exemples de vie quotidienne accompagnent les exemples scolaires, avec leur lien précis à la notion et la limite de chaque comparaison.
+- La leçon « Bases, octets et hexadécimal » repart de 13 billes et des centaines/dizaines/unités. Elle construit ensuite le binaire avec quatre interrupteurs, explique l’octet puis l’hexadécimal, et seulement ensuite les puissances, les limites de stockage et la syntaxe Python nécessaire. Le petit laboratoire intégré ne présente pas les nombres négatifs avant la leçon qui les introduit.
 - Chaque leçon contient des objectifs et prérequis, des explications en petites étapes, trois exemples variés, une manipulation et trois exercices guidé/application/transfert, puis une reformulation et trois critères d’autoévaluation.
 - Les niveaux et leçons restent accessibles librement. **À l’intérieur d’une leçon**, une première reformulation ouvre la manipulation ; une prévision, une action et une observation expliquée ouvrent les exercices. Répondre à un exercice ouvre le suivant ; après trois essais, le bilan devient accessible. Une mauvaise réponse permet donc de poursuivre l’entraînement, mais ne valide pas la leçon.
 - Une leçon est terminée après trois exercices réussis et trois critères de relecture cochés. Les réponses libres sont autoévaluées : le site vérifie qu’elles sont renseignées, sans prétendre noter leur justesse.
 - L’atelier introductif suit Découvrir, Manipuler, Expliquer et Bilan. Il demande une reformulation avant de manipuler, les activités réussies avant d’expliquer, et une explication écrite ou déclarée à voix haute avant le bilan.
 - Les termes techniques soulignés en pointillés ouvrent une définition courte au survol, au focus clavier ou au toucher. Échap ou la perte du focus ferme la définition. Les acronymes sont reconnus comme des mots entiers ; les termes à l’intérieur des URL et du code ne sont pas réécrits.
+- Les réponses aux pauses et les états des petits laboratoires de lecture sont sauvegardés. Ils ne rapportent pas de points supplémentaires et ne modifient pas les réussites des exercices. Les XP restent calculés sur les réussites uniques. Les étoiles et flèches de navigation utilisent des icônes vectorielles centrées dans leurs pastilles.
 - Les indices utilisent un fond ivoire doré, une bordure or, un texte sombre et une indication du niveau d’aide. Deux premières pistes guident ; le troisième indice ou le corrigé distingue une réussite accompagnée. Lire une correction ne valide pas un exercice.
 - Les exercices jugent des résultats et des contraintes, pas la ressemblance avec une réponse modèle. Plusieurs chemins et ordres sont acceptés quand ils respectent les dépendances.
 - Trois aides : question de guidage, indice concret, exemple résolu. La consultation du troisième niveau classe la variante comme accompagnée. Une nouvelle variante peut être réussie sans corrigé.
@@ -172,8 +230,10 @@ Le site suppose un navigateur récent compatible WebAssembly et une connexion po
 ```text
 src/content/       Missions, variantes, indices, corrigés et sources
 src/content/courses/ Parcours par niveau et chapitre, capacités officielles et projets
+src/content/annales/ Catalogue des sujets, tutoriels, indices et résolutions
 src/content/glossary.js Définitions contextuelles des termes informatiques
 src/domain/        Validation des exercices et des sauvegardes
+src/domain/annales.js Déblocage des corrigés et filtrage des annales
 src/composables/   État Vue et persistance
 src/components/    Illustrations, activités, éditeur et éléments partagés
 src/components/courses/ Cadre des leçons, laboratoires, définitions, aides et récompenses

@@ -1,4 +1,6 @@
-import { lesson, answer as a, python as p, web as w } from './authoring.js';
+import { lesson as assembleLesson, answer as a, python as p, web as w } from './authoring.js';
+import pedagogy from './pedagogy-embarquee.js';
+const lesson = (data) => assembleLesson(data, pedagogy[data.id]);
 export default {
   id: 'embarquee',
   title: 'Informatique embarquée et objets connectés',

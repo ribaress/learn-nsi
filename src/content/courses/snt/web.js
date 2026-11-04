@@ -1,4 +1,12 @@
-import { lesson, answer as a, python as p, web as w, tableActivity as table } from './authoring.js';
+import {
+  lesson as assembleLesson,
+  answer as a,
+  python as p,
+  web as w,
+  tableActivity as table
+} from './authoring.js';
+import pedagogy from './pedagogy-web.js';
+const lesson = (data) => assembleLesson(data, pedagogy[data.id]);
 export default {
   id: 'web',
   title: 'Le Web',

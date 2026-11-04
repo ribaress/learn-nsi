@@ -412,7 +412,7 @@
         {
           "id": "premiere-histoire",
           "title": "Des procédures aux machines universelles",
-          "duration": 30,
+          "duration": 65,
           "objectives": [
             "Placer des repères historiques et expliquer ce qui change à chaque étape."
           ],
@@ -428,17 +428,18 @@
         {
           "id": "premiere-bases",
           "title": "Bases, octets et hexadécimal",
-          "duration": 40,
+          "duration": 90,
           "objectives": [
-            "Convertir entre bases 2, 10 et 16.",
-            "Relier longueur binaire et plage de valeurs."
+            "Comprendre pourquoi une même quantité peut s’écrire de plusieurs façons.",
+            "Lire et construire un nombre en binaire, puis en hexadécimal.",
+            "Expliquer ce qu’un octet permet de représenter et vérifier la place nécessaire."
           ],
           "exercises": [{ "id": "p-b1" }, { "id": "p-b2" }, { "id": "p-b3" }]
         },
         {
           "id": "premiere-signes",
           "title": "Entiers signés et complément à deux",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Coder un entier négatif sur une taille fixée.",
             "Détecter une valeur hors domaine."
@@ -448,7 +449,7 @@
         {
           "id": "premiere-flottants",
           "title": "Approcher les réels avec des flottants",
-          "duration": 35,
+          "duration": 65,
           "objectives": [
             "Développer une fraction en base 2.",
             "Comparer des résultats approchés avec une tolérance."
@@ -458,7 +459,7 @@
         {
           "id": "premiere-logique",
           "title": "Booléens, tables et circuits",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Construire une table de vérité.",
             "Distinguer ET, OU inclusif, XOR et négation."
@@ -468,7 +469,7 @@
         {
           "id": "premiere-encodages",
           "title": "Caractères, octets et encodages",
-          "duration": 35,
+          "duration": 65,
           "objectives": [
             "Différencier caractère, point de code et octets.",
             "Transcoder un texte sans perdre ses caractères."
@@ -485,14 +486,14 @@
         {
           "id": "premiere-tuples",
           "title": "Renvoyer plusieurs résultats avec un tuple",
-          "duration": 25,
+          "duration": 55,
           "objectives": ["Regrouper et décomposer plusieurs valeurs."],
           "exercises": [{ "id": "p-c1" }, { "id": "p-c2" }, { "id": "p-c3" }]
         },
         {
           "id": "premiere-listes",
           "title": "Tableaux, indices et compréhensions",
-          "duration": 40,
+          "duration": 65,
           "objectives": [
             "Modifier une case et parcourir un tableau.",
             "Construire une sélection en compréhension."
@@ -502,7 +503,7 @@
         {
           "id": "premiere-matrices",
           "title": "Des tableaux de tableaux aux matrices",
-          "duration": 35,
+          "duration": 65,
           "objectives": [
             "Accéder à une case par ligne puis colonne.",
             "Parcourir une matrice et créer des lignes indépendantes."
@@ -512,7 +513,7 @@
         {
           "id": "premiere-dictionnaires",
           "title": "Dictionnaires et enregistrements nommés",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Créer et modifier une association.",
             "Choisir entre keys, values et items."
@@ -529,7 +530,7 @@
         {
           "id": "premiere-csv",
           "title": "Importer une table CSV et typer les données",
-          "duration": 40,
+          "duration": 65,
           "objectives": [
             "Lire des descripteurs et des lignes.",
             "Convertir et vérifier les domaines de valeurs."
@@ -539,7 +540,7 @@
         {
           "id": "premiere-selection-tri",
           "title": "Sélectionner, contrôler et trier une table",
-          "duration": 40,
+          "duration": 65,
           "objectives": [
             "Combiner des critères de sélection.",
             "Repérer doublons et incohérences.",
@@ -550,7 +551,7 @@
         {
           "id": "premiere-fusion",
           "title": "Fusionner des tables sur une clé",
-          "duration": 35,
+          "duration": 65,
           "objectives": [
             "Relier deux tables par une clé commune.",
             "Anticiper absences et clés multiples."
@@ -567,7 +568,7 @@
         {
           "id": "premiere-evenements",
           "title": "Composants graphiques et événements",
-          "duration": 40,
+          "duration": 70,
           "objectives": [
             "Relier structure HTML et comportement JavaScript.",
             "Modifier la fonction appelée par un clic."
@@ -577,7 +578,7 @@
         {
           "id": "premiere-http",
           "title": "Client, serveur, état et HTTPS",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Remettre une interaction réseau dans l’ordre.",
             "Distinguer mémoire locale, transmission et chiffrement."
@@ -587,7 +588,7 @@
         {
           "id": "premiere-formulaires",
           "title": "Formulaires et paramètres GET ou POST",
-          "duration": 35,
+          "duration": 70,
           "objectives": [
             "Lire action, method, name et value.",
             "Choisir un mode d’envoi adapté à l’usage."
@@ -604,7 +605,7 @@
         {
           "id": "premiere-processeur",
           "title": "Processeur, mémoire et circuits combinatoires",
-          "duration": 45,
+          "duration": 65,
           "objectives": [
             "Décrire le rôle des constituants.",
             "Tracer des instructions élémentaires.",
@@ -615,7 +616,7 @@
         {
           "id": "premiere-reseaux",
           "title": "Paquets, encapsulation et protocole du bit alterné",
-          "duration": 45,
+          "duration": 75,
           "objectives": [
             "Expliquer le découpage et les couches.",
             "Simuler perte, accusé et retransmission sans doublon."
@@ -625,7 +626,7 @@
         {
           "id": "premiere-systemes",
           "title": "Linux, fichiers, commandes et permissions",
-          "duration": 40,
+          "duration": 65,
           "objectives": [
             "Identifier les services du système.",
             "Naviguer et régler des permissions dans un terminal."
@@ -635,7 +636,7 @@
         {
           "id": "premiere-capteurs",
           "title": "Capteurs, actionneurs et cahier des charges",
-          "duration": 35,
+          "duration": 75,
           "objectives": [
             "Relier une mesure à une commande.",
             "Traduire une règle d’interface en programme testable."
@@ -652,7 +653,7 @@
         {
           "id": "premiere-constructions",
           "title": "Affectations, conditions et boucles",
-          "duration": 40,
+          "duration": 80,
           "objectives": [
             "Composer des instructions élémentaires.",
             "Choisir entre boucle bornée et boucle conditionnelle."
@@ -662,7 +663,7 @@
         {
           "id": "premiere-contrats",
           "title": "Fonctions, prototypes et contrats",
-          "duration": 40,
+          "duration": 65,
           "objectives": [
             "Définir entrées et sortie.",
             "Exprimer et vérifier préconditions et postconditions."
@@ -672,7 +673,7 @@
         {
           "id": "premiere-tests",
           "title": "Mettre au point avec des jeux de tests",
-          "duration": 35,
+          "duration": 65,
           "objectives": [
             "Construire des tests nominaux, limites et invalides.",
             "Chercher un contre-exemple à un programme."
@@ -682,7 +683,7 @@
         {
           "id": "premiere-langages-bibliotheques",
           "title": "Bibliothèques, modules et diversité des langages",
-          "duration": 40,
+          "duration": 70,
           "objectives": [
             "Lire la documentation d’une fonction.",
             "Réutiliser un module.",
@@ -700,7 +701,7 @@
         {
           "id": "premiere-parcours",
           "title": "Rechercher, calculer extrema et moyennes",
-          "duration": 45,
+          "duration": 70,
           "objectives": [
             "Programmer un parcours linéaire.",
             "Justifier l’initialisation d’un extremum.",
@@ -711,7 +712,7 @@
         {
           "id": "premiere-insertion",
           "title": "Trier par insertion et prouver le préfixe trié",
-          "duration": 45,
+          "duration": 75,
           "objectives": [
             "Insérer une valeur dans un préfixe trié.",
             "Expliquer invariant, terminaison et coût quadratique."
@@ -721,7 +722,7 @@
         {
           "id": "premiere-selection",
           "title": "Trier par sélection et justifier le minimum restant",
-          "duration": 40,
+          "duration": 75,
           "objectives": [
             "Sélectionner le minimum d’un suffixe.",
             "Prouver le tri et comparer les coûts."
@@ -731,7 +732,7 @@
         {
           "id": "premiere-dichotomie",
           "title": "Dichotomie et variant de boucle",
-          "duration": 45,
+          "duration": 75,
           "objectives": [
             "Réduire un intervalle de recherche.",
             "Prouver la terminaison avec la longueur restante."
@@ -741,7 +742,7 @@
         {
           "id": "premiere-knn",
           "title": "Prédire par les k plus proches voisins",
-          "duration": 45,
+          "duration": 85,
           "objectives": [
             "Calculer des distances et sélectionner k voisins.",
             "Prédire une classe majoritaire en annonçant les conventions."
@@ -751,7 +752,7 @@
         {
           "id": "premiere-gloutons",
           "title": "Choix gloutons et limites de l’optimalité",
-          "duration": 40,
+          "duration": 75,
           "objectives": [
             "Exprimer un choix local.",
             "Comparer une solution gloutonne à un contre-exemple optimal."
@@ -770,7 +771,7 @@
         {
           "id": "terminale-histoire",
           "title": "Une même machine, plusieurs programmes",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Relier une date à une idée et à ses protagonistes",
             "Expliquer le rôle du programme enregistré",
@@ -792,7 +793,7 @@
         {
           "id": "terminale-interfaces",
           "title": "L’interface promet, l’implémentation réalise",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Spécifier les opérations d’une file",
             "Distinguer contrat et choix de stockage",
@@ -807,7 +808,7 @@
         {
           "id": "terminale-objets",
           "title": "Classes, attributs et méthodes",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Définir une classe avec un constructeur",
             "Accéder à des attributs et appeler des méthodes",
@@ -822,7 +823,7 @@
         {
           "id": "terminale-listes",
           "title": "Listes chaînées et tableaux dynamiques",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Décrire les cellules d’une liste chaînée",
             "Parcourir une liste jusqu’à None",
@@ -837,7 +838,7 @@
         {
           "id": "terminale-piles-files",
           "title": "Piles et files : choisir l’ordre de sortie",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Distinguer FIFO et LIFO",
             "Écrire les opérations d’une pile",
@@ -852,7 +853,7 @@
         {
           "id": "terminale-dictionnaires",
           "title": "Dictionnaires : accéder par une clé",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Distinguer une clé d’une valeur",
             "Comparer recherche séquentielle et accès par clé",
@@ -867,7 +868,7 @@
         {
           "id": "terminale-arbres-structure",
           "title": "Arbres : organiser une hiérarchie",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Reconnaître racine, feuille et sous-arbres",
             "Distinguer taille et hauteur avec une convention",
@@ -882,7 +883,7 @@
         {
           "id": "terminale-graphes-structure",
           "title": "Graphes : matrices et listes de voisins",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Modéliser sommets, arcs et arêtes",
             "Construire matrice et listes d’adjacence",
@@ -904,7 +905,7 @@
         {
           "id": "terminale-modele-relationnel",
           "title": "Schéma, intégrité, anomalies et SGBD",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Distinguer schéma relationnel et contenu",
             "Repérer une anomalie et une contrainte d’intégrité",
@@ -919,7 +920,7 @@
         {
           "id": "terminale-sql-selection",
           "title": "SQL : projeter, filtrer et trier",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Lire SELECT, FROM et WHERE",
             "Combiner filtres et ordre de sortie",
@@ -934,7 +935,7 @@
         {
           "id": "terminale-sql-jointures",
           "title": "SQL : relier plusieurs relations",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Relier les clés dans une jointure",
             "Préfixer les attributs avec des alias",
@@ -949,7 +950,7 @@
         {
           "id": "terminale-sql-modifications",
           "title": "SQL : insérer, mettre à jour, supprimer",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Insérer une ligne avec ses attributs",
             "Limiter UPDATE et DELETE avec WHERE",
@@ -971,7 +972,7 @@
         {
           "id": "terminale-soc",
           "title": "Systèmes sur puce : rapprocher les composants",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Identifier CPU, mémoire et contrôleurs dans un SoC",
             "Relier intégration, échanges et énergie",
@@ -986,7 +987,7 @@
         {
           "id": "terminale-processus",
           "title": "Processus, ordonnancement et interblocage",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Décrire création et états d’un processus",
             "Tracer un ordonnancement concurrent",
@@ -1001,7 +1002,7 @@
         {
           "id": "terminale-routage",
           "title": "RIP et OSPF : quelle route optimiser ?",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Lire destination, interface et prochain saut",
             "Choisir une route selon la métrique RIP",
@@ -1016,7 +1017,7 @@
         {
           "id": "terminale-cryptographie",
           "title": "Clés partagées, clés publiques et HTTPS",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Expliquer chiffrement symétrique et asymétrique",
             "Relier authentification et établissement d’un secret",
@@ -1038,7 +1039,7 @@
         {
           "id": "terminale-calculabilite",
           "title": "Programme comme donnée et problème de l’arrêt",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Expliquer comment un programme devient la donnée d’un autre",
             "Distinguer calculabilité et efficacité",
@@ -1053,7 +1054,7 @@
         {
           "id": "terminale-recursivite",
           "title": "Récursivité : descendre puis remonter les appels",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Identifier cas de base et réduction du problème",
             "Tracer appels et retours récursifs",
@@ -1068,7 +1069,7 @@
         {
           "id": "terminale-modules-api",
           "title": "Modules et API : lire un contrat avant d’appeler",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Lire signature, domaine et retour d’une API",
             "Importer et utiliser un module documenté",
@@ -1083,7 +1084,7 @@
         {
           "id": "terminale-paradigmes",
           "title": "Impératif, fonctionnel et objet : trois approches",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Reconnaître mutation impérative et composition fonctionnelle",
             "Identifier état et méthodes dans une approche objet",
@@ -1098,7 +1099,7 @@
         {
           "id": "terminale-bugs",
           "title": "Mettre au point : isoler, corriger, retester",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Construire un contre-exemple minimal",
             "Corriger bornes, effets de bord et conditions incomplètes",
@@ -1120,7 +1121,7 @@
         {
           "id": "terminale-parcours-arbres",
           "title": "Mesurer un arbre et le parcourir dans quatre ordres",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Calculer taille et hauteur récursivement",
             "Tracer préfixe, infixe et suffixe",
@@ -1135,7 +1136,7 @@
         {
           "id": "terminale-abr",
           "title": "Arbre binaire de recherche : chercher et insérer",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Utiliser la propriété globale d’un ABR",
             "Rechercher en éliminant un sous-arbre",
@@ -1150,7 +1151,7 @@
         {
           "id": "terminale-parcours-graphes",
           "title": "Graphes : profondeur, largeur, chemins et cycles",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Distinguer parcours en profondeur et en largeur",
             "Reconstruire un chemin depuis les prédécesseurs",
@@ -1165,7 +1166,7 @@
         {
           "id": "terminale-tri-fusion",
           "title": "Diviser pour régner et tri fusion",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Séparer division, résolution et combinaison",
             "Fusionner deux listes déjà triées",
@@ -1180,7 +1181,7 @@
         {
           "id": "terminale-dynamique",
           "title": "Programmation dynamique : mémoriser les sous-problèmes",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Repérer des sous-problèmes recouvrants",
             "Construire une table dans un ordre de dépendances",
@@ -1195,7 +1196,7 @@
         {
           "id": "terminale-boyer-moore",
           "title": "Recherche textuelle et prétraitement de Boyer-Moore",
-          "duration": 35,
+          "duration": 60,
           "objectives": [
             "Comparer le motif de droite à gauche",
             "Prétraiter la dernière position des caractères",
